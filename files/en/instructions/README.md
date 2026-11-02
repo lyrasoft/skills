@@ -11,7 +11,9 @@ This directory stores the "instruction layer" of the shared toolkit. It contains
 
 ## Contents
 
-- `instruction.instructions.md`: explains how to route content between `instructions`, `skills`, `docs`, and `prompts`
+- [instruction.instructions.md](instruction.instructions.md): explains how to route content between `instructions`, `skills`, `docs`, and `prompts`
+- [test-common.instructions.md](test-common.instructions.md): PHPUnit test-writing conventions for PHP test files
+- [test-coverage.instructions.md](test-coverage.instructions.md): mandatory rules for `@codeCoverageIgnore` and untestable branches
 - additional repo-level guidance files can be added here as new topics emerge
 
 ## Principles

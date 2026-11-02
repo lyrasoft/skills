@@ -13,6 +13,10 @@ These two versions are meant to coexist as parallel language variants of the sam
 
 Unless a task explicitly requests Chinese-only or another specific language, the default behavior is to write in both Chinese and English together. Keep the wording neutral and reusable, and do not repeat the company name inside `files/` unless there is a specific need.
 
+## File references
+
+When linking to another file, prefer a Markdown link such as `[file name](relative/path.md)`. Use inline code only when mentioning a filename or file type without linking to it.
+
 ## File roles
 
 - `README.md`: overview and usage context

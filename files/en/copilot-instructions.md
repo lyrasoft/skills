@@ -24,8 +24,8 @@ Do not add product implementation docs, application source code, deployment scri
 
 ## Project structure
 
-- `../../README.md`: project overview, company introduction, and shared standards
-- `../../AGENTS.md`: general guidance for contributors and AI agents
+- [Project overview and shared standards](../../README.md)
+- [General guidance for contributors and AI agents](../../AGENTS.md)
 - `instructions`: repository-level rules and content routing guidance
 - `SKILL.md`: formal definition of a reusable skill
 - `skills`: shared skills and templates
@@ -34,8 +34,8 @@ Do not add product implementation docs, application source code, deployment scri
 
 ## File role separation
 
-- `../../README.md`: entry point, overview, and index
-- `../../AGENTS.md` / `.github/copilot-instructions.md`: repository-level rules and constraints for AI and contributors
+- [Entry point, overview, and index](../../README.md)
+- [Repository-level rules and constraints for AI and contributors](../../AGENTS.md) / `.github/copilot-instructions.md`
 - `SKILL.md`: defines a skill, including purpose, use cases, expected behavior, and validation
 - `*.prompt.md`: reusable prompt templates
 - `docs`: human-readable documentation and reference material
@@ -44,16 +44,17 @@ Do not add product implementation docs, application source code, deployment scri
 
 `docs` may contain longer reference documents. Use a lazy-loading approach: do not read the full folder up front unless the task clearly requires it.
 
-- `docs/index.md`: overview and section index; start here to identify which document is relevant.
+- [docs/index.md](docs/index.md): overview and section index; start here to identify which document is relevant.
 - `docs/templates/`: templates, doc structure, and writing conventions; read this when creating or revising documentation.
 - When adding a new docs category, update this section list so future work knows when to load it.
-- If unsure which doc to read, start with `docs/index.md` and then open only the topic-specific file needed for the current task.
+- If unsure which doc to read, start with [docs/index.md](docs/index.md) and then open only the topic-specific file needed for the current task.
 
 Keep these sections short, durable, and expandable so future documentation categories can be added without rewriting the instruction file.
 
 ## Editing principles
 
 - keep everything in Markdown
+- when linking to another file, prefer a Markdown link such as `[file name](relative/path.md)`; use inline code only when mentioning a filename or file type without linking to it
 - prefer neutral, reusable language
 - avoid customer-, product-, or team-specific details unless they are explicitly required as examples
 - keep templates concise and easy to copy into other repositories

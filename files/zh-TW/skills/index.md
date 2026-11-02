@@ -13,15 +13,16 @@
 
 這個資料夾中的內容應依類型使用不同檔名：
 
-- `../../../README.md`: 目錄或總覽說明
+- [總覽說明](../../../README.md)
 - `SKILL.md`: 單一技能的正式定義
 - `*.prompt.md`: 可重用 prompt 模板
-- `../../../AGENTS.md` / `.github/copilot-instructions.md`: repo-level 指引
+- [repo-level 指引](../../../AGENTS.md) / `.github/copilot-instructions.md`
 
-也就是說，若某份內容是技能本身，請命名為 `SKILL.md`，不要用 `../../../README.md` 替代；`README.md` 只保留給總覽與索引。
+也就是說，若某份內容是技能本身，請命名為 `SKILL.md`，不要用 `README.md` 替代；`README.md` 只保留給總覽與索引。
 
 ## 組織
 
+- [test](test/SKILL.md)：新增、更新與執行 PHPUnit 測試的流程
 - `templates`: 共用的技能與指引起始模板
 
 ## 維護

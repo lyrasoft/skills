@@ -13,15 +13,16 @@ This directory holds reusable, cross-project skills and operational guidance tha
 
 Content in this folder should use different filenames based on purpose:
 
-- `../../../README.md`: directory or project overview
+- [Directory or project overview](../../../README.md)
 - `SKILL.md`: formal definition of a single skill
 - `*.prompt.md`: reusable prompt templates
-- `../../../AGENTS.md` / `.github/copilot-instructions.md`: repository-level instructions
+- [Repository-level instructions](../../../AGENTS.md) / `.github/copilot-instructions.md`
 
 In other words, if a file is a skill itself, name it `SKILL.md` rather than `README.md`. `README.md` should be reserved for overview and index content.
 
 ## Organization
 
+- [test](test/SKILL.md): workflow for adding, updating, and running PHPUnit tests
 - `templates`: shared starter templates for skills and guidance
 
 ## Maintenance

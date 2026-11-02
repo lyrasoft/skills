@@ -11,7 +11,9 @@
 
 ## 內容
 
-- `instruction.instructions.md`: 說明如何將內容拆到 `instructions`、`skills`、`docs`、`prompts` 之間
+- [instruction.instructions.md](instruction.instructions.md)：說明如何將內容拆到 `instructions`、`skills`、`docs`、`prompts` 之間
+- [test-common.instructions.md](test-common.instructions.md)：PHP 測試檔案的 PHPUnit 撰寫慣例
+- [test-coverage.instructions.md](test-coverage.instructions.md)：`@codeCoverageIgnore` 與不可忽略分支的強制規則
 - 其他 repo-level 指引文件可在此目錄中持續新增，依主題分層管理
 
 ## 原則
