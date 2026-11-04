@@ -54,7 +54,7 @@ Keep these sections short, durable, and expandable so future documentation categ
 ## Editing principles
 
 - keep everything in Markdown
-- when linking to another file, prefer a Markdown link such as `[file name](relative/path.md)`; use inline code only when mentioning a filename or file type without linking to it
+- when linking to other files in a list, you can use the Markdown link format `[display text](relative path)` at the beginning; when simply mentioning a file name or file type, you can use backticks.
 - prefer neutral, reusable language
 - avoid customer-, product-, or team-specific details unless they are explicitly required as examples
 - keep templates concise and easy to copy into other repositories
