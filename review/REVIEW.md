@@ -22,4 +22,5 @@
 - [Windwalker 4 官方文件 llms.txt](https://windwalker.io/llms.txt) - Windwalker 4 專案的官方文件索引，提供各種開發相關的文件連結。
   - [官方文件 REST API](https://docs.windwalker.io/search) - Windwalker 4 專案的官方文件搜尋工具，提供快速搜尋專案相關文件的功能。
   - [官方文件 MCP](https://docs-search.windwalker.io/mcp) - Windwalker 4 專案的官方文件 MCP (type=http) 伺服器，提供文件搜尋與查詢功能。
-- [review.instructions.md](review/review.instructions.md) - Code Review 執行指引，這是主要的任務入口
+- [review.instructions.md](instructions/review.instructions.md) - Code Review 執行指引，這是主要的任務入口
+- [php-review.instructions.md](instructions/php-review.instructions.md) - PHP Code Review 執行指引
