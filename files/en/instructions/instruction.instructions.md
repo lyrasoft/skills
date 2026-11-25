@@ -4,7 +4,7 @@
 
 When a user asks to add certain rules into `instruction`, `skills`, or `docs`, this does not mean everything should be stuffed into `instructions`. The right approach is to split content by its nature, scope, and reusability.
 
-This file defines the routing rule so `main.instructions.md`, `copilot-instructions.md` stays concise and actionable instead of turning into a giant catch-all document.
+This file defines the routing rule so `main.instructions.md` stays concise and actionable instead of turning into a giant catch-all document.
 
 ## Classification rules
 

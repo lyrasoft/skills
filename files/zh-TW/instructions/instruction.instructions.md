@@ -1,79 +1,38 @@
-# instruction.instructions.md
+# 編寫指引的指引
 
 ## 目的
 
 當使用者要求將某些規則加入 `instruction`、`skills` 或 `docs` 時，這不表示要全部塞進 `instructions`。正確做法是依照規則的性質與使用頻率，將內容拆分到最適合的位置。
 
-這個檔案作為分流規則，避免 `main.instructions.md`, `copilot-instructions.md` 變成超大集合，導致 AI 無法快速判斷哪些是強制規則、哪些是可重用技能、哪些是長篇背景說明。
-
 ## 分類原則
 
-### 1. `instructions`：強制性、全域性、最重要的規則
+當使用者要求「把規則加到 instruction / skills / docs」時，判斷方式依據:
 
-適合放這裡的內容：
+- `instructions`：repository-level 規則與內容分流說明
+- `skills`：共用技能與模板
+- `docs`：長篇文件與範本
 
-- 這個專案的基本準則與價值觀
-- 必須遵守的工作流程與限制
-- 語言規範（例如：預設中英文同時編寫）
-- 檔案命名規範與專案結構規則
-- 安全、保密與不應新增的內容類型
-- 需要所有協作者都遵循的 repo-level 原則
+詳細介紹可參考 @../main.instructions.md#指引文件目錄說明
 
-這些內容應該短、精、明確，並且是「必須遵守」的層級。
+## 編輯原則
 
-### 2. `skills`：可重用的能力與任務模式
+- 檔案連結:
+  - 重要的檔案連結或指引，使用 `@相對路徑` 格式
+  - 需要搭配標題時，可用 markdown 格式: `[顯示文字](相對路徑)` 連結
+  - 一般敘述中提及檔案可依語境決定是否連結，單純提及檔名或檔案類型時使用反引號
+- 避免加入特定客戶、產品或部門資料，除非作為範例明確需要
+- 避免敏感資訊、產品機密、部署設定與金鑰
 
-適合放這裡的內容：
+### Skills 編寫原則
 
-- 一個具體任務的模板化流程
-- 何時該使用某個方法/能力
-- 預期行為、輸出要求與驗證方式
-- 可重用的工作模式、檢查清單與標準流程
+請見公開規範文件:
+- https://www.skillsdirectory.com/docs/writing-effective-skills
+- https://www.skillsdirectory.com/docs/skill-md-format
+- https://www.skillsdirectory.com/docs/skill-file-structure
 
-換句話說，如果內容是「如何做一件事」且能被多個任務重複使用，就該放入 `SKILL.md`，而不是塞進 instructions。
+## 驗證
 
-### 3. `docs`：背景、解釋、長篇說明、參考資料
-
-適合放這裡的內容：
-
-- 專案背景與設計理念
-- 架構說明、流程解釋、背景知識
-- onboarding、長文件、操作說明
-- 例子、案例、實務經驗與補充資料
-
-如果內容是「why / background / long-form reference」，應放入 `docs`，不要塞在 instructions 中。
-
-### 4. `prompts`：任務模板
-
-適合放這裡的內容：
-
-- 可重用 prompt
-- 例如初始化專案、建立指引、產出標準回覆等
-
-這類內容不是規則，也不是技能本體，而是給 AI 或工程師直接使用的任務模板。
-
-## 決策規則
-
-當使用者要求「把規則加到 instruction / skills / docs」時，判斷方式如下：
-
-- 如果是「必須遵守」的全域規則 → `instructions`
-- 如果是「可複用的做法、能力或流程」→ `skills`
-- 如果是「解釋背景、長篇文件、說明與參考」→ `docs`
-- 如果是「直接執行任務的模板」→ `prompts`
-
-## 原則
-
-- 不要把所有規則都塞進 `instructions`
-- `instructions` 應保持簡短、強制、可快速掃讀
-- 長篇內容與背景知識應放入 `docs`
-- 可重用工作模式應抽成 `skills`
-- 只有真正重複、可模組化的內容才升級成技能
-
-## 範例
-
-- 「所有內容皆為 Markdown」 → `instructions`
-- 「如何建立一份 repo-init skill」 → `skills`
-- 「公司 AI 協作與團隊導入背景」 → `docs`
-- 「初始化 repo 的 prompt 模板」 → `prompts`
-
-這樣能保持 `instructions` 清楚、`skills` 可重用、`docs` 長篇可維護。 
+- 內容仍然是 markdown-only
+- 指引仍保持通用且可重用
+- 儲存的內容維持公司共用知識庫定位
+- 專案不會逐漸演變成單一產品或專案的私有資料庫

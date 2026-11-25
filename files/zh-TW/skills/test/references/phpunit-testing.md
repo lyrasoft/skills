@@ -1,13 +1,17 @@
----
-applyTo: "**/{test,Test,tests,Tests}/**/*.php"
----
+# PhpUnit 測試規範與最佳寫法
 
-# 共用測試指令
+## PhpUnit 版本
 
-新增、更新與執行測試的完整流程（包含本機 PHPUnit 範圍設定與使用 coverage），請見 [test 技能](../skills/test/SKILL.md)。
-`@codeCoverageIgnore` 的規則請見 [coverage 指令](test-coverage.instructions.md)。
+本專案使用 PHPUnit 13 以上，請參考官方文件： https://docs.phpunit.de/
 
-## 測試方法優先使用 `#[Test]`
+## 規範與最佳寫法
+
+### 盡可能避免使用過期語法
+
+- 若有 PhpStorm MCP 或其他工具提示某個 API 已過期，請盡量改用官方建議的替代方案。
+- 若有機會閱讀到 PhpUnit 原始碼，請避開被標註 deprecated 的方法。
+
+### 測試方法優先使用 `#[Test]`
 
 優先使用 `#[Test]` attribute（`PHPUnit\Framework\Attributes\Test`），而非 `test` 方法名稱前綴，並以描述性名稱說明被測行為。
 不要使用 `@test` docblock annotation。
@@ -23,16 +27,23 @@ public function findReturnsNullWhenMissing(): void
 
 若只是修改一個一致使用 `test` 前綴的檔案中的少數方法，請維持既有風格。
 
-## 生命週期 hook 優先使用 attribute
+### 生命週期 hook 優先使用 attribute
 
 優先使用 `#[Before]` / `#[After]`、`#[BeforeClass]` / `#[AfterClass]`、`#[PreCondition]` / `#[PostCondition]`，
 而非傳統 hook（`setUp()`、`tearDown()` 等）。請從 `PHPUnit\Framework\Attributes` 匯入；使用描述性方法名稱、`void` 回傳，
 類別層級 hook 使用 static 方法。避免空的 hook，遷移時須保留父類別／trait 的行為與執行順序。
 
-## 為測試 fixture 與整合目標加上說明
+### 為測試 fixture 與整合目標加上說明
 
 為僅供測試使用的 fixture 與整合目標加上類別 docblock，說明其角色，以及依賴它的行為或測試。並註明何時可以移除
 （例如被覆蓋的行為已移除且沒有測試再引用它），讓後續維護者能分辨刻意保留的測試支援程式碼與無用程式碼。
+
+## 無邏輯的 getter/setter 或單純代理方法不需獨立測試
+
+不要只為了執行純 getter/setter（僅回傳或指派屬性，可選擇 `return $this`）而撰寫獨立測試。若此類方法無法透過其他行為測試
+取得有意義的覆蓋，請在方法 docblock 加上 `@codeCoverageIgnore` 排除。之後若加入邏輯（驗證、正規化、延遲初始化、副作用等），
+
+詳細請見 @coverages.md
 
 ## 已棄用／建議使用的 API（快速規則）
 
