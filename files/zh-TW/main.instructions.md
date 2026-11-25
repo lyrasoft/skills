@@ -23,7 +23,7 @@
 ## 檔案角色區分
 
 - `README.md`：入口、總覽與索引
-- `AGENTS.md` / `.github/copilot-instructions.md`：AI 與協作者的作業規則與限制
+- `AGENTS.md`：AI 與協作者的作業規則與限制
 - `SKILL.md`：技能定義，說明目的、適用時機、預期行為與驗證
 - `*.prompt.md`：可重用 prompt 模板
 - `docs`：說明文件、範本與長文件，僅在需要時才載入

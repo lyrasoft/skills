@@ -16,7 +16,7 @@ Content in this folder should use different filenames based on purpose:
 - [Directory or project overview](../../../README.md)
 - `SKILL.md`: formal definition of a single skill
 - `*.prompt.md`: reusable prompt templates
-- [Repository-level instructions](../../../AGENTS.md) / `.github/copilot-instructions.md`
+- [Repository-level instructions](../../../AGENTS.md) / `.agents/main.instructions.md`
 
 In other words, if a file is a skill itself, name it `SKILL.md` rather than `README.md`. `README.md` should be reserved for overview and index content.
 

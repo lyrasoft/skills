@@ -16,7 +16,7 @@
 - [總覽說明](../../../README.md)
 - `SKILL.md`: 單一技能的正式定義
 - `*.prompt.md`: 可重用 prompt 模板
-- [repo-level 指引](../../../AGENTS.md) / `.github/copilot-instructions.md`
+- [repo-level 指引](../../../AGENTS.md) / `.agents/main.instructions.md`
 
 也就是說，若某份內容是技能本身，請命名為 `SKILL.md`，不要用 `README.md` 替代；`README.md` 只保留給總覽與索引。
 

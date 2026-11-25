@@ -5,7 +5,7 @@ This directory stores the "instruction layer" of the shared toolkit. It contains
 ## Purpose
 
 - keep the essential instruction rules in one place
-- maintain a concise and readable `copilot-instructions.md`
+- maintain a concise and readable `main.instructions.md`
 - clearly separate rules, skills, long-form documents, and prompts
 - leave a scalable entry point for future instruction additions
 

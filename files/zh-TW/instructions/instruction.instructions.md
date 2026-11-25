@@ -4,7 +4,7 @@
 
 當使用者要求將某些規則加入 `instruction`、`skills` 或 `docs` 時，這不表示要全部塞進 `instructions`。正確做法是依照規則的性質與使用頻率，將內容拆分到最適合的位置。
 
-這個檔案作為分流規則，避免 `copilot-instructions.md` 變成超大集合，導致 AI 無法快速判斷哪些是強制規則、哪些是可重用技能、哪些是長篇背景說明。
+這個檔案作為分流規則，避免 `main.instructions.md`, `copilot-instructions.md` 變成超大集合，導致 AI 無法快速判斷哪些是強制規則、哪些是可重用技能、哪些是長篇背景說明。
 
 ## 分類原則
 

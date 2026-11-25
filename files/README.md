@@ -20,7 +20,7 @@ When linking to another file, prefer a Markdown link such as `[file name](relati
 ## File roles
 
 - `README.md`: overview and usage context
-- `AGENTS.md` or `.github/copilot-instructions.md`: repo-level guidance for agents and contributors
+- `AGENTS.md: repo-level guidance for agents and contributors
 - `instructions/`: repository-level rules and routing guidance
 - `SKILL.md`: a reusable skill definition
 - `*.prompt.md`: reusable prompt templates
