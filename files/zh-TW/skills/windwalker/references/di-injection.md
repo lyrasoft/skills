@@ -1,46 +1,38 @@
 # Windwalker DI 與注入
 
-本參考說明 Windwalker 的依賴注入（DI）容器在 Earth 中的運作方式，以及如何把服務注入到類別中。
+## 設定位置
 
-官方文件：
+- 服務綁定放在 `etc/di.php`（獨立 DI 設定）的 `bindings`、`providers`、`aliases`、`extends`、`attributes` 等鍵。
+- 在 Earth 專案中，DI 設定由 `etc/config.php` 的 `'di' => include __DIR__ . '/di.config.php'` 載入，且 `di` 區段最後處理。
+- 路徑別名（`@temp`、`@logs`）定義於 `etc/define.php` 與 `etc/runtime.config.php`，由 `PathResolver` 解析。
 
-- [DI 概覽](https://windwalker.io/documentation/components/di/)
-- [基本用法](https://windwalker.io/documentation/components/di/basic-usage.html)
-- [屬性](https://windwalker.io/documentation/components/di/attributes.html)
-- [參數](https://windwalker.io/documentation/components/di/parameters.html)
-- [多層容器](https://windwalker.io/documentation/components/di/multi-levels.html)
+## 取得服務
 
-## 運作方式
-
-- 服務可依類別名稱或別名從容器取得，例如 `PathResolver::class` 或 `'@temp'`。
-- 容器會讀取物件建構子的參數型別，並逐一解析後建立物件。
-- 註冊為 shared 的服務（例如 `AppProvider.php` 中的 `PathResolver`）每次取得時都會回傳同一個實例。
-- 可使用容器的 `get()` 方法，或在具備服務感知能力的物件上使用 `service()`，例如 `ConsoleApplication` 或 `AppContext`：
+- 以類別名稱或別名從容器取得：`$this->container->get(...)`，或 `$this->app->service(...)`。
+- 範例：
 
 ```php
 $path = $this->container->get(PathResolver::class)->resolve('@temp/cache');
 $path = $this->app->service(PathResolver::class)->resolve('@migrations');
 ```
 
-## 建構子注入
+- `AppProvider` 以 `prepareSharedObject(PathResolver::class)` 註冊為 shared，每次取得皆為同一實例。
 
-在建構子中為依賴加上型別提示，容器會自動解析：
+## 注入方式
 
-```php
-class FileUploadService
-{
-    public function __construct(
-        protected Container $container,
-    ) {
-    }
-}
-```
-
-只有由容器建立的類別才會取得注入的建構子參數。使用 `new` 建立的類別不會被注入，因此需要明確傳入依賴，或從容器取得。
-
-## 使用 `#[Inject]` 的屬性注入
-
-若類別沒有建構子注入點，或需要的依賴不在建構子中，可在屬性上加上 `#[Inject]`：
+- **建構子注入**：在建構子參數加上型別提示，容器自動解析。
+- **屬性注入 `#[Inject]`**：可用於屬性與參數。定義位於 `vendor/windwalker/framework/packages/di/src/Attributes/Inject.php`。
+  - `id`：服務 ID 或別名。
+  - `forceNew`：建立新實例。
+  - `tag`：字串或列舉值，用於解析帶標籤的服務。
+- 解析順序：先 id 或第一個類別／介面型別，再找該 tag 的已註冊服務，最後才建立具體類別；介面不會自動建立。
+- **`#[Autowire]`**：建立未解析的依賴，可用於類別、可呼叫物件與參數。
+- **`#[NoAutowire]`**：略過單一參數的自動注入。
+- **`#[Service]`**：解析共享服務，可用於屬性、參數與類別。
+  - `shared: false`：非共享。
+  - `tag`：帶標籤解析。
+  - `providedIn`：限制服務所在的容器層級。
+- 只有容器建立的物件會被注入；`new` 建立的物件不會。
 
 ```php
 use Windwalker\DI\Attributes\Inject;
@@ -52,36 +44,51 @@ abstract class AbstractModule implements ModuleInterface
 }
 ```
 
-此屬性定義於 `vendor/windwalker/core/vendor/windwalker/framework/packages/di/src/Attributes/Inject.php`，接受以下參數：
+## 以函式依標籤綁定服務
 
-- `?string $id`：要解析的服務 ID 或別名，取代型別提示。
-- `bool $forceNew`：建立新實例，而非重用 shared 實例。
-- `UnitEnum|Closure|string|null $tag`：解析帶有標籤的服務。
-
-`#[Inject]` 也可用於建構子參數（`TARGET_PARAMETER`）。
-
-## 使用 `#[Ref]` 注入設定值
-
-若只需要讀取單一設定值，而不想注入整個應用程式，可在屬性上使用 `#[Ref]`。它會從容器參數（設定樹）解析指定路徑。
-
-以 `#[Ref('app.debug')]` 取代 `$app->isDebug()`：
+- 在 `bindings` 放一個接收 `?string $tag` 的 closure，依標籤回傳不同實作。
+- 呼叫端以 `tag` 指定變體，預設不帶標籤時走 `default`。
 
 ```php
-use Windwalker\Core\Attributes\Ref;
-
-class TinymceEditorField
-{
-    #[Ref('app.debug')]
-    protected bool $debug;
-}
+// etc/di.config.php，在回傳陣列內
+'bindings' => [
+    ChatModelInterface::class => function (
+        Container $container,
+        ?string $tag = null,
+    ) {
+        return match ($tag) {
+            'claude' => $container->newInstance(ChatClaudeDriver::class),
+            default => $container->newInstance(ChatGPTDriver::class),
+        };
+    },
+],
 ```
 
-之後將原本使用 `$this->app->isDebug()` 的地方改為 `$this->debug`。`Ref` 解析的值與 `ApplicationTrait::isDebug()` 的回傳值相同（`config('app.debug')`）。Core 本身也是這樣讀取，例如 `WhoopsProvider.php` 與 `RequestProvider.php` 使用 `getParam('app.debug')`。
+```php
+$gpt = $app->retrieve(ChatModelInterface::class);
+$claude = $app->retrieve(ChatModelInterface::class, tag: 'claude');
+```
 
-若類別只需要設定值，優先使用 `#[Ref]`。只有需要呼叫應用程式方法時，才注入 `ApplicationInterface`。
+- 以 closure 綁定時每次取得都會建立新物件；需要每個標籤共用一個實例時，改在 provider 以 `bindShared()` 綁定。
+- 使用列舉作為標籤可避免拼字錯誤：參數型別改為 `?ChatModelDriver $tag`。若要同時接受字串，參數型別用 `string|\UnitEnum|null`，並以 rich enum 的 `wrap()` 轉換。
+- 對不可信輸入，使用 `tryWrap()`（未知值回傳 `null`），而非 `wrap()`（未知值拋出 `ValueError`）。
+- 標籤區分大小寫，`'SMS'` 與 `'sms'` 是不同標籤。
 
-## 注意事項
+## Provider 生命週期
 
-- 只能注入到由容器建立的物件中。使用 `new` 建立的物件不會進行注入。
-- `@temp`、`@logs` 等別名定義於 `etc/define.php` 與 `etc/runtime.config.php`，請透過 `PathResolver` 解析。
-- 若類別完全無法取得容器，不要自行建立全域變數，應詢問如何傳入依賴。
+- Provider 實作 `register()`，可選擇實作 `bootDeferred()`、`bootBeforeRequest()`、`releaseAfterRequest()`。
+- 多層容器與 `providedIn` 與 request／application 層級相關。
+
+## 注意
+
+- 類別若無法取得容器，請勿建立全域變數，應詢問如何傳入依賴。
+
+## 參考連結
+
+- [依賴注入概念](https://windwalker.io/documentation/framework/core-concepts/dependency-injection/dependency-injection.md)
+- [服務變體](https://windwalker.io/documentation/framework/core-concepts/dependency-injection/service-variants.md)
+- [DI 概覽](https://windwalker.io/documentation/components/di/index.md)
+- [基本用法](https://windwalker.io/documentation/components/di/basic-usage.md)
+- [屬性](https://windwalker.io/documentation/components/di/attributes.md)
+- [參數](https://windwalker.io/documentation/components/di/parameters.md)
+- [多層容器](https://windwalker.io/documentation/components/di/multi-levels.md)

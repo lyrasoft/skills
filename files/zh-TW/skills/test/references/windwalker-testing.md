@@ -14,6 +14,11 @@
 ## 其他
 
 - 若需要 smoke test 或編寫臨時性測試文件，盡量放置於專案的 `tmp/` 目錄下。見 @smoke-test.md
+- 測試需要暫存檔案或目錄時：
+  - 用專案 `tmp/`（`WINDWALKER_TEMP`，預設 `WINDWALKER_ROOT . '/tmp'`），不用 `sys_get_temp_dir()`／`tempnam()`，也不放專案根目錄。
+  - 路徑如 `WINDWALKER_TEMP . '/ww-test-' . uniqid()`。
+  - 在 `#[Before]` 建立，在 `#[After]`（或 shutdown function）移除。
+- App 測試（層級、自動重置、request 範圍、輔助 trait）見 @app-testing.md
 
 ## 文件
 

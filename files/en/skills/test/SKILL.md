@@ -37,6 +37,11 @@ Provide a repeatable workflow for adding, updating, and running PHPUnit tests. W
 4. Do not chase percentages with assertion-free tests or new coverage exclusions.
 5. If coverage cannot run, report the limitation rather than claiming the gaps are covered.
 
+## Related references
+
+- App testing (tiers, automatic reset, request scope, helper traits): [app-testing](references/app-testing.md)
+- Env values, temp files, filesystem tests: [phpunit-testing](references/phpunit-testing.md)
+
 ## Validation
 
 - the requested scope was actually executed, not silently skipped

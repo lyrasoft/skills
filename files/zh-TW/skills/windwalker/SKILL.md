@@ -30,13 +30,15 @@ description: Windwalker 框架的技能，提供 Windwalker 專案開發相關�
   - Windwalker Search API: https://docs-search.windwalker.io/search
   - Search MCP Tools: `windwalker-docs-search`
 - 核心
-  - 建立 MVC 模組的產生器指令與注意事項 @references/mvc-generation.md
-  - 可用的 CLI 指令與使用方式 @references/commands.md
+  - 建立 MVC 模組的產生器指令與注意事項: @references/mvc-generation.md
+  - 可用的 CLI 指令與使用方式: @references/commands.md
+  - DI 容器與服務註冊: @references/di-container.md
+  - I18n 多國語言環境開發: @references/i18n.md
 - Unicorn
-  - Unicorn JS 與 PHP 的協作流程 @references/unicorn-js-script-pipeline.md
+  - Unicorn JS 與 PHP 的協作流程: @references/unicorn-js-script-pipeline.md
 - 前端
-  - Vue 元件、掛載與外掛設定 @references/vue-development.md
-  - Vite／Fusion 建置與 AssetService 資產解析 @references/frontend-and-assets.md
+  - Vue 元件、掛載與外掛設定: @references/vue-development.md
+  - Vite／Fusion 建置與 AssetService 資產解析: @references/frontend-and-assets.md
 
 ## 驗證
 

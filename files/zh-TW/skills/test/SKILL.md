@@ -28,6 +28,8 @@ description: 共用的 Test 技能，可以從這裡入口尋找測試相關的�
 - 所有測試工作共同的知識 @references/test-common.md
 - PHP / Windwalker 框架之測試 @references/windwalker-testing.md
   - PhpUnit 測試規範與指引 @references/phpunit-testing.md
+  - App 測試（層級、自動重置、request 範圍、輔助 trait）@references/app-testing.md
+  - 資料庫測試（InMemory、真實 DBMS）@references/database-testing.md
   - Coverage 規範與指引 @references/coverages.md
   - Smoke Test / 暫存執行檔規範與指引 @references/smoke-test.md
 - E2e / Playwright 測試規範與指引 @references/e2e-testing.md

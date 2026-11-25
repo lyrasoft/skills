@@ -38,6 +38,22 @@ public function findReturnsNullWhenMissing(): void
 為僅供測試使用的 fixture 與整合目標加上類別 docblock，說明其角色，以及依賴它的行為或測試。並註明何時可以移除
 （例如被覆蓋的行為已移除且沒有測試再引用它），讓後續維護者能分辨刻意保留的測試支援程式碼與無用程式碼。
 
+### 在測試中讀寫環境變數
+
+- 讀取：用 `Windwalker\Utilities\Env::get()`，不直接讀 `$_SERVER`/`$_ENV`。
+- 寫入：優先用 `Env::set()`（同步 `$_SERVER`、`$_ENV`、`putenv()`）；版本不支援時手動設 `$_SERVER`（必要時 `$_ENV`）。
+- host app 的 `.env` 可能洩漏變數（如 `MAIL_ENABLED=1`）而干擾預設值。
+- 在 `#[Before]` 用 `Env::get()` 保存原值再覆寫，在 `#[After]` 還原。
+
+### 檔案系統測試
+
+- 真實檔案系統：用 `Windwalker\Filesystem\Test\FilesystemTestTrait`（`packages/filesystem/test/`）。
+  - `assertPathEquals()`：以 `Path::clean()` 比較。
+  - `assertRealpathEquals()`：以 `Path::normalize()` 比較（不呼叫 `realpath()`）。
+  - 分隔符不影響行為時，不直接比較原始路徑字串。
+- 不需真實檔案系統或 OS 行為：用 vfsStream（`org\bovigo\vfs\vfsStream`、`vfs://`），可重用 `AbstractVfsTestCase`（`packages/filesystem/test/`）。
+- API 不支援 stream wrapper 或需原生語意：用真實暫存檔，並於測試後清除；位置見 @windwalker-testing.md。
+
 ## 無邏輯的 getter/setter 或單純代理方法不需獨立測試
 
 不要只為了執行純 getter/setter（僅回傳或指派屬性，可選擇 `return $this`）而撰寫獨立測試。若此類方法無法透過其他行為測試
