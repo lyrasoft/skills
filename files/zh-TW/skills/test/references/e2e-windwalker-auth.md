@@ -66,8 +66,8 @@ TEST_ADMIN_SESSION_ID=
 - Cookie 屬性（domain、path、httponly、samesite）對 `-b "NAME=value"` 沒有影響；它送出的是原始 header。
 - 在 PowerShell 中使用 `curl.exe`；存取 `/admin/*` 時使用後台 cookie 名稱 `WINDWALKER_ADMIN_SESSID`。
 
-```powershell
-curl.exe -s -o NUL -w "%{http_code} %{redirect_url}`n" `
+```bash
+curl -s -o NUL -w "%{http_code} %{redirect_url}`n" `
   -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120.0 Safari/537.36" `
   -b "WINDWALKER_ADMIN_SESSID=$id" http://localhost:8089/admin/article/list
 ```
@@ -93,3 +93,10 @@ curl.exe -s -o NUL -w "%{http_code} %{redirect_url}`n" `
 - 新建的使用者可能沒有自己的資料（個人資料、關聯紀錄）；請準備頁面所需的資料。
 - 於執行時以 PHP（`password_hash`）產生密碼雜湊；不要將固定雜湊存入 repo。
 - 將新帳號像其他憑證一樣寫入 `.env.agent.local`（`TEST_<STAGE>_USERNAME` ／ `TEST_<STAGE>_PASSWORD`），完成後再移除該使用者。
+
+## 相關文件
+
+- [Session 元件](https://windwalker.io/documentation/components/session/index.md)
+- [Session 處理器（Handlers）](https://windwalker.io/documentation/components/session/handlers.md)
+- [Session 橋接（Bridges）](https://windwalker.io/documentation/components/session/bridges.md)
+- [Session 與 Cookie](https://windwalker.io/documentation/framework/core-concepts/state-control/session-and-cookies.md)

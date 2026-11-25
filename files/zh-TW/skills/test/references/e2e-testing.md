@@ -16,10 +16,11 @@
 
 - **以明確的連接埠啟動 PHP 伺服器**，並記錄其 PID：
 
-   ```powershell
-   Start-Process php -ArgumentList 'windwalker','server:start','php:main','--host','localhost','--port','8089' `
-     -RedirectStandardOutput tmp/e2e/server.out -RedirectStandardError tmp/e2e/server.err -PassThru
-   curl.exe -s -o NUL -w "%{http_code}" http://localhost:8089/   # expect 200
+   ```bash
+   php windwalker server:start php:main --host localhost --port 8089 \
+     > tmp/e2e/server.out 2> tmp/e2e/server.err &
+   echo $!                                                        # 伺服器 PID
+   curl -s -o /dev/null -w "%{http_code}" http://localhost:8089/  # expect 200
    ```
 
    回傳的 PID 可能是啟動器而非實際監聽的程序。請用 `Get-NetTCPConnection -LocalPort 8089 -State Listen` 找出真正的 PID，並只停止該程序（`Stop-Process -Id <PID>`）。

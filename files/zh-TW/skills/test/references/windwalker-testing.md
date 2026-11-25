@@ -11,10 +11,9 @@
 - `tests/` 目錄下放置測試檔案，結構盡量接近 `src/` 目錄結構，方便對應。
 - `tests/` 目錄下通常有 `TestApp` 與 `bootstrap.xx.php`，用於測試環境初始化與共用設定。
 
-
 ## 其他
 
-- 若需要 smoke test 或編寫臨時性測試文件，盡量放置於專案的 `tmp/` 目錄下。
+- 若需要 smoke test 或編寫臨時性測試文件，盡量放置於專案的 `tmp/` 目錄下。見 @smoke-test.md
 
 ## 文件
 
@@ -22,3 +21,7 @@
 - Windwalker 文件搜尋可使用 MCP `windwalker-docs-search`，或查閱公開文件索引: https://windwalker.io/llms.txt
 - PhpUnit 文件請見 @phpunit-testing.md
 - 其他相關文件請參考專案的 instructions 或 docs/ 目錄。
+
+## 相關文件
+
+- [Test 元件](https://windwalker.io/documentation/components/test/index.md)
