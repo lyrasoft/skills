@@ -2,45 +2,42 @@
 
 ## 目的
 
-這個專案是公司共用的 agent 指示庫，作為跨專案、跨部門的共用知識基礎，讓 AI 協作與企業內部文件維護都遵循一致標準。
+這個檔案是專案內的 Copilot 指引，提供協作者與 AI agent 在專案內的操作規範與限制。
 
 ## 應放置在此處的內容
 
-- 跨專案可重用的技能與作業說明
+- 專案內可使用的技能與作業說明
 - 公司內部文件模板與慣例
-- AI prompt 模板與通用工作指引
-- 團隊 onboarding 與專案初始化的標準流程
-
-請不要加入產品實作文件、應用程式原始碼、部署腳本、機密資訊或敏感設定。
+- AI prompt 模板與工作指引
 
 ## 專案結構
 
-- [專案總覽與共用標準](../../README.md)
-- [協作者與 AI agent 的基本指引](../../AGENTS.md)
-- `instructions`: repository-level 規則與內容分流說明
-- `SKILL.md`: 單一可重用技能的正式定義（適用於技能本身）
-- `skills`: 公司共用技能與模板
-- `docs`: 公司內文件與範本
-- `prompts`: AI 工作流程 prompt 模板
+- @../../README.md：專案總覽與共用標準
+- @../../AGENTS.md：協作者與 AI agent 的基本指引
+- `instructions`：repository-level 規則與內容分流說明
+- `SKILL.md`：單一可重用技能的正式定義（適用於技能本身）
+- `skills`：公司共用技能與模板
+- `docs`：公司內文件與範本
+- `prompts`：AI 工作流程 prompt 模板
 
 ## 檔案角色區分
 
-- [入口、總覽與索引](../../README.md)
-- [AI/協作者的作業規則與限制](../../AGENTS.md) / `.github/copilot-instructions.md`
+- `README.md`：入口、總覽與索引
+- `AGENTS.md` / `.github/copilot-instructions.md`：AI 與協作者的作業規則與限制
 - `SKILL.md`：技能定義，說明目的、適用時機、預期行為與驗證
 - `*.prompt.md`：可重用 prompt 模板
-- `docs`：人類可讀的說明文檔
+- `docs`：說明文件、範本與長文件，僅在需要時才載入
 
-## docs sections / 長文件載入規則
+## docs 段落與長文件載入規則
 
 `docs` 可能會包含較長的說明文件，請依「需要時才載入」的原則處理，不要一開始就一次讀完整個資料夾：
 
-- [docs/index.md](docs/index.md)：文件總覽與分段入口，先讀這個即可快速判斷需要看哪個文件。
-- `docs/templates/`: 文件模板、文件架構與寫作方式，適合創建或修正文件時載入。
-- 新增 docs 類別時，請同步補充此處的 section 說明，讓後續使用者知道該文件適合在哪個情境下載入。
-- 若不確定要看哪個 docs，先讀 [docs/index.md](docs/index.md)，再依主題定位到需要的長文件。
+- @docs/index.md：文件總覽與分段入口，先讀這個即可快速判斷需要看哪個文件。
+- `docs/templates/`：文件模板、文件架構與寫作方式，適合創建或修正文件時載入。
+- 新增 docs 類別時，請同步補充此處的段落說明，讓後續使用者知道該文件適合在哪個情境下載入。
+- 若不確定要看哪個 docs，先讀 @docs/index.md，再依主題定位到需要的長文件。
 
-這些 section 需保持簡短、可擴充，方便未來新增新的 docs 分類而不必重寫整份指引。
+這些段落需保持簡短、可擴充，方便未來新增新的 docs 分類而不必重寫整份指引。
 
 ## 編輯原則
 

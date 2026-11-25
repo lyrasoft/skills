@@ -29,7 +29,7 @@
 這個倉庫依照 GitHub Copilot 官方建議，將不同型態的內容明確分開：
 
 - `README.md`: 這個資料夾或專案的總覽、目的與索引；適合放介紹與入口資訊。
-- `AGENTS.md` / `.github/copilot-instructions.md`: repository-level 的工作規則、風格與限制，面向協作者與 AI agent。
+- `AGENTS.md` / `.agents/main.instructions.md`: repository-level 的工作規則、風格與限制，面向協作者與 AI agent。
 - `SKILL.md`: 單一可重用技能的定義，說明適用時機、預期行為與驗證方式；適合放在技能層級。
 - `*.prompt.md`: 可重用的 prompt 模板，讓 AI 能直接使用特定任務指令。
 - `files/docs/` 與 `files/skills/`: 文件與技能的內容集合，不是整體專案入口。
