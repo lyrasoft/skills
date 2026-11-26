@@ -17,18 +17,19 @@
 ## 編輯原則
 
 - 檔案連結:
-  - 重要的檔案連結或指引，使用 `@相對路徑` 格式
+  - 重要的檔案連結或指引，使用 `@相對路徑` 格式，如果要在清單中附加介紹文字，優先放後面 `- @link Text`，除非前方是祈使句。
   - 需要搭配標題時，可用 markdown 格式: `[顯示文字](相對路徑)` 連結
   - 一般敘述中提及檔案可依語境決定是否連結，單純提及檔名或檔案類型時使用反引號
+  - 遠端網址連結使用 `<URL>` 格式，若要附上簡短說明文字，放在後面 `- <URL> Text`，除非前方是祈使句。
 - 條列式說明，不需要太多前因後果 (除非該行為有特定情境或限制)
 - 避免敏感資訊、產品機密、部署設定與金鑰
 
 ### Skills 編寫原則
 
 請見公開規範文件:
-- https://www.skillsdirectory.com/docs/writing-effective-skills
-- https://www.skillsdirectory.com/docs/skill-md-format
-- https://www.skillsdirectory.com/docs/skill-file-structure
+- <https://www.skillsdirectory.com/docs/writing-effective-skills> Writing Effective Skills
+- <https://www.skillsdirectory.com/docs/skill-md-format> Skill MD Format
+- <https://www.skillsdirectory.com/docs/skill-file-structure> Skill File Structure
 
 ## 驗證
 

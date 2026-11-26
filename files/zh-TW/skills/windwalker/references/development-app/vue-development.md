@@ -28,7 +28,7 @@
 
 ## 去哪找
 
-- 建置入口、別名、輸出路徑與 manifest：@frontend-and-assets.md
-- `~` 別名（對應 `resources/assets`）與資產路徑：@frontend-and-assets.md
+- 建置入口、別名、輸出路徑與 manifest：@../knowledge/frontend-and-assets.md
+- `~` 別名（對應 `resources/assets`）與資產路徑：@../knowledge/frontend-and-assets.md
 - 官方原文：[Vue Development](https://windwalker.io/documentation/framework/frontend/vue.html)
 - 其他文件查詢：`windwalker-docs-search` MCP 工具

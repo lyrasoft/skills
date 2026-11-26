@@ -29,16 +29,19 @@ description: Windwalker 框架的技能，提供 Windwalker 專案開發相關�
 - Windwalker 官方文件: https://windwalker.io/llms.txt
   - Windwalker Search API: https://docs-search.windwalker.io/search
   - Search MCP Tools: `windwalker-docs-search`
-- 核心
-  - 建立 MVC 模組的產生器指令與注意事項: @references/mvc-generation.md
-  - 可用的 CLI 指令與使用方式: @references/commands.md
-  - DI 容器與服務註冊: @references/di-container.md
-  - I18n 多國語言環境開發: @references/i18n.md
-- Unicorn
-  - Unicorn JS 與 PHP 的協作流程: @references/unicorn-js-script-pipeline.md
-- 前端
-  - Vue 元件、掛載與外掛設定: @references/vue-development.md
-  - Vite／Fusion 建置與 AssetService 資產解析: @references/frontend-and-assets.md
+- 核心知識 @references/knowledge/
+  - 可用的 CLI 指令與使用方式: @references/knowledge/commands.md
+  - DI 容器與服務註冊: @references/knowledge/di-injection.md
+  - I18n 多國語言環境開發: @references/development-app/i18n.md
+  - Unicorn JS 與 PHP 的協作流程: @references/knowledge/unicorn-js-script-pipeline.md
+  - Vite／Fusion 建置與 AssetService 資產解析: @references/knowledge/frontend-and-assets.md
+- 應用開發 @references/development-app/
+  - 建立 MVC 模組的產生器指令與注意事項: @references/development-app/mvc-generation.md
+  - Vue 元件、掛載與外掛設定: @references/development-app/vue-development.md
+- 核心開發 @references/development-core/
+  - Package 開發與編輯: @references/development-core/package-development.md
+- 測試
+  - Windwalker 測試工作: @references/test/testing.md
 
 ## 驗證
 

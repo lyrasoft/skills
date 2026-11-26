@@ -2,7 +2,7 @@
 
 ## 審查規範文件
 
-- PHP 程式碼審查指引 @../docs/review/review-php.md
+- PHP 程式碼審查指引 @../skills/lyrasoft-best-practice/references/review/review-php.md
 
 ## 輸出規則
 
