@@ -59,12 +59,20 @@ class PortfolioPackage extends AbstractPackage
 
 常用安裝方法包括 `installConfig()`、`installRoutes()`、`installMigrations()`、`installLanguages()`、`installViews()`、`installSeeders()`、`installFiles()`、`installModules()`、`installMVCModules()`。每個方法都可傳入 tag，讓使用者只安裝部分資源。各方法的參數與細節請見官方文件。
 
-## 在宿主應用程式中測試
+## 在宿主應用程式中研發
 
 1. 宿主應用程式的 `composer.json` 加入 `path` repository 指向本地 Package 資料夾，並 `require` 該套件。
 2. 執行 `composer update acme/portfolio`。
 3. 執行 `php windwalker pkg:install acme/portfolio --all` 安裝資源。
 4. 修改會被 `pkg:install` 複製的檔案後，需要重新安裝。加上 `--force` 會覆寫既有檔案，執行前請先 commit 宿主應用程式。
+
+### 新專案在 Host App 啟動時
+
+使用者提出首次開發指令時，先詢問使用者**要建立的套件名稱與命名空間**，再詢問希望放在外部目錄還是 `vendor/` 內。
+
+若是希望放在 `vendor/` 內，可以先放到專案的 `vendor/{namespace}/{name}` 內，若是希望放在外部目錄，則依照使用者指定的目錄先存放。
+
+接著使用 `composer.json` 加入 `path` repository 指向該資料夾，然後 require 套件名稱。
 
 ## 注意事項
 
@@ -74,7 +82,7 @@ class PortfolioPackage extends AbstractPackage
 
 ## 相關文件
 
-- 設定檔與 `ConfigModule`：https://windwalker.io/documentation/framework/getting-started/configuration.md
-- Package Migration：https://windwalker.io/documentation/framework/packages/package-migration.md
-- Package JavaScript：https://windwalker.io/documentation/framework/packages/package-javascript.md
+- 設定檔與 `ConfigModule`：<https://windwalker.io/documentation/framework/getting-started/configuration.md>
+- Package Migration：<https://windwalker.io/documentation/framework/packages/package-migration.md>
+- Package JavaScript：<https://windwalker.io/documentation/framework/packages/package-javascript.md>
 - 修改既有 Package 或 Framework 原始碼（`composer install --prefer-source`）：參考官方文件「Modifying an Existing Package」段落。
