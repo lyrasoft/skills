@@ -1,7 +1,7 @@
 # Flower MVC 工作計畫
 
-- Stage: `Admin`
-- Subject: `Flower`
+- $stage: `Admin` 
+- $subject: `Flower`
 
 ## 目標
 
@@ -9,8 +9,10 @@
 
 ## 參考文件
 
-- Windwalker MVC 架構、Code Generation、ORM Entities
-- `windwalker/references/development-app/mvc-generation.md`
+<!-- agent: 描述接下來產生 MVC 時，該 agent 應該閱讀的文件，路徑要從根目錄起始 -->
+
+- [Windwalker MVC 架構文件](https://windwalker.io/documentation/unicorn/mvc-crud/mvc-concepts.md)
+- `.agents/skills/windwalker/references/development-app/mvc-generation.md` MVC 產生指引
 
 ## 資料表（`flowers`）
 
