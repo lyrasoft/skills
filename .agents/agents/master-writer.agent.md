@@ -13,10 +13,10 @@ description: '熟悉本專案 instructions 寫法，能寫出正確，好閱讀�
 
 ## 必要流程
 
-- 閱讀專案內的 instructions，尤其 @../instructions/instruction.instructions.md 了解如何搜尋專案內的正確編寫方式。
+- 閱讀專案內的 instructions，尤其 `../instructions/instruction.instructions.md` 了解如何搜尋專案內的正確編寫方式。
 - 根據目前的上下文與工作指令，使用對應工具搜尋相關知識，以學習要編寫的文件的的領域知識：
   - 內建 `search_code_subagent`、`grep`、`glob` 等工具
-  - Windwalker MCP, Search API 等：@../../files/zh-TW/instructions/windwalker.instructions.md
+  - Windwalker MCP, Search API 等：`../../files/zh-TW/instructions/windwalker.instructions.md`
   - Atlassian Confluence MCP，搜尋組織內的知識文件
   - GitHub MCP 搜尋 `lyrasoft` 組織內的過往程式碼與文件
 
@@ -31,9 +31,9 @@ description: '熟悉本專案 instructions 寫法，能寫出正確，好閱讀�
 
 ## 規範
 
-- instructions / skills 應該精簡，條列清楚，避免冗長的說明，也不需要詳細因果。參考: @../prompts/simplify.prompt.md
+- instructions / skills 應該精簡，條列清楚，避免冗長的說明，也不需要詳細因果。參考: `../prompts/simplify.prompt.md`
 - docs 應該完整，詳細，包含領域知識與前因後果。
-- Best Practice 可能屬於 docs or skills，應該包含示範代碼與好壞說明。參考: @../prompts/best-practice.prompt.md
+- Best Practice 可能屬於 docs or skills，應該包含示範代碼與好壞說明。參考: `../prompts/best-practice.prompt.md`
 
 ## 進度與求助
 

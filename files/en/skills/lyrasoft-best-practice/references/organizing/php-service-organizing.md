@@ -35,7 +35,7 @@ Avoid circular injection between ProjectService and TaskService, and avoid imple
 
 ## Approach for large projects
 
-When a Service becomes too large (for example, ProjectService, ProjectRunnerService, and ProjectTaskService each have more than 20 methods, or read and write operations are mixed), split it by role. The naming concepts are similar to those in Vue projects; see @vue-service-organizing.md.
+When a Service becomes too large (for example, ProjectService, ProjectRunnerService, and ProjectTaskService each have more than 20 methods, or read and write operations are mixed), split it by role. The naming concepts are similar to those in Vue projects; see `vue-service-organizing.md`.
 
 | Role | Responsibility | Naming examples |
 | --- | --- | --- |

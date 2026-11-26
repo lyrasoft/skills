@@ -30,19 +30,19 @@ This skill generally applies to projects developed with PHP / the Windwalker fra
   - Windwalker Search API: <https://docs-search.windwalker.io/search> - POST JSON: `{"messages": [{"role": "user","content": "Search text..."}]}`
   - Chat API <POST https://docs-search.windwalker.io/chat/completions> - OpenAI Chat Completions API
   - Search MCP tool: `windwalker-docs-search`
-- Core knowledge @references/knowledge/
-  - Available CLI commands and usage: @references/knowledge/commands.md
-  - DI container and service registration: @references/knowledge/di-injection.md
-  - I18n and multilingual development: @references/development-app/i18n.md
-  - Unicorn JS and PHP collaboration workflow: @references/knowledge/unicorn-js-script-pipeline.md
-  - Vite / Fusion build and AssetService asset resolution: @references/knowledge/frontend-and-assets.md
-- Application development @references/development-app/
-  - MVC module generator commands and notes: @references/development-app/mvc-generation.md
-  - Vue components, mounting, and plugin configuration: @references/development-app/vue-development.md
-- Core development @references/development-core/
-  - Package development and editing: @references/development-core/package-development.md
+- Core knowledge `references/knowledge/`
+  - Available CLI commands and usage: `references/knowledge/commands.md`
+  - DI container and service registration: `references/knowledge/di-injection.md`
+  - I18n and multilingual development: `references/development-app/i18n.md`
+  - Unicorn JS and PHP collaboration workflow: `references/knowledge/unicorn-js-script-pipeline.md`
+  - Vite / Fusion build and AssetService asset resolution: `references/knowledge/frontend-and-assets.md`
+- Application development `references/development-app/`
+  - MVC module generator commands and notes: `references/development-app/mvc-generation.md`
+  - Vue components, mounting, and plugin configuration: `references/development-app/vue-development.md`
+- Core development `references/development-core/`
+  - Package development and editing: `references/development-core/package-development.md`
 - Testing
-  - Windwalker testing tasks: @references/test/testing.md
+  - Windwalker testing tasks: `references/test/testing.md`
 
 ## Verification
 

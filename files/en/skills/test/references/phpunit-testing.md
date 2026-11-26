@@ -52,7 +52,7 @@ Add a class docblock to fixtures and integration targets used only for testing. 
   - `assertRealpathEquals()`: compares paths using `Path::normalize()` (does not call `realpath()`).
   - Do not compare raw path strings when separators do not affect behavior.
 - If real filesystem or OS behavior is not needed: use vfsStream (`org\bovigo\vfs\vfsStream`, `vfs://`); reuse `AbstractVfsTestCase` (`packages/filesystem/test/`).
-- If the API does not support stream wrappers or native semantics are needed: use real temporary files and clean them up after testing; see @windwalker-testing.md for their location.
+- If the API does not support stream wrappers or native semantics are needed: use real temporary files and clean them up after testing; see `windwalker-testing.md` for their location.
 
 ## No separate tests are needed for getters/setters without logic or simple proxy methods
 
@@ -60,7 +60,7 @@ Do not write separate tests just to execute pure getters/setters (which only ret
 obtained through other behavior tests, exclude it by adding `@codeCoverageIgnore` to the method's docblock. If logic is later added (validation, normalization, lazy initialization, side effects, etc.),
 remove the ignore annotation and test the behavior.
 
-For details, see @coverages.md.
+For details, see `coverages.md`.
 
 ## Deprecated / recommended APIs (quick reference)
 

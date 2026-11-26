@@ -20,15 +20,15 @@ Choose the lowest tier that covers the behavior. Tiers 1 and 2 may both use a DB
 | 3 DB: memory | SQLite `:memory:` | pure SQL/ORM logic without dialect-specific features | memory |
 | 4 DB: real | real DBMS | dialect behavior, migrations, seeders | real |
 
-- For tier 3 and 4 rules and traits, see @database-testing.md.
-- For tier 1 test doubles, see @phpunit-testing.md.
+- For tier 3 and 4 rules and traits, see `database-testing.md`.
+- For tier 1 test doubles, see `phpunit-testing.md`.
 
 ## Helpers (`src/Core/Testing/`)
 
 - `AbstractTestApp`: app test base class; `tests/TestApp.php` is a subclass.
 - `Traits/ServiceAwareTestTrait`: one child container per test class; provides `make()`, `retrieve()`, and `call()`; requires `AbstractTestApp::$ctx` (or `$sharedCtx`) to be prepared first; does not boot the app.
 - `Traits/ControllerTestTrait`: `dispatchController()` accepts a controller, input or request, and method arguments; requires the app context to be prepared first.
-- `Traits/InMemoryDatabaseTestTrait`, `Traits/DatabaseTestTrait`: see @database-testing.md.
+- `Traits/InMemoryDatabaseTestTrait`, `Traits/DatabaseTestTrait`: see `database-testing.md`.
 
 ## Assertions by tier
 

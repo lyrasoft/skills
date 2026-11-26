@@ -14,7 +14,7 @@ Use when frontend testing is needed and **there is no existing page that renders
 - If PHP and JS work together (PHP registers or outputs content that JS depends on, or JS expects PHP to configure something first):
   - Read the Windwalker documentation and semantically search for `php js script pipeline`; multiple documents may need to be read together.
   - Check the instructions to determine the applicable workflow, build steps, or initialization scripts.
-  - Check @e2e-testing.md / @e2e-windwalker-auth.md to determine whether a frontend test environment is needed.
+  - Check `e2e-testing.md` / `e2e-windwalker-auth.md` to determine whether a frontend test environment is needed.
 - Use `grep` to find usages (class names, tag names, or imports).
 
 ## Choose an approach
@@ -39,7 +39,7 @@ Use when frontend testing is needed and **there is no existing page that renders
    ```
 
 2. Fill in the view class name in the generated route file.
-3. Add test HTML and JS to the generated empty file (which may be Blade or TS), then open the route in a browser (@e2e-testing.md).
+3. Add test HTML and JS to the generated empty file (which may be Blade or TS), then open the route in a browser (`e2e-testing.md`).
 4. After testing, delete the generated view, route entry, and files, along with any remaining temporary code. Do not leave temporary pages in the repository.
 
 ## Related documentation

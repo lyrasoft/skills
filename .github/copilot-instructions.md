@@ -1,1 +1,1 @@
-@.agents/main.instructions.md
+`.agents/main.instructions.md`

@@ -52,14 +52,14 @@ public function findReturnsNullWhenMissing(): void
   - `assertRealpathEquals()`：以 `Path::normalize()` 比較（不呼叫 `realpath()`）。
   - 分隔符不影響行為時，不直接比較原始路徑字串。
 - 不需真實檔案系統或 OS 行為：用 vfsStream（`org\bovigo\vfs\vfsStream`、`vfs://`），可重用 `AbstractVfsTestCase`（`packages/filesystem/test/`）。
-- API 不支援 stream wrapper 或需原生語意：用真實暫存檔，並於測試後清除；位置見 @windwalker-testing.md。
+- API 不支援 stream wrapper 或需原生語意：用真實暫存檔，並於測試後清除；位置見 `windwalker-testing.md`。
 
 ## 無邏輯的 getter/setter 或單純代理方法不需獨立測試
 
 不要只為了執行純 getter/setter（僅回傳或指派屬性，可選擇 `return $this`）而撰寫獨立測試。若此類方法無法透過其他行為測試
 取得有意義的覆蓋，請在方法 docblock 加上 `@codeCoverageIgnore` 排除。之後若加入邏輯（驗證、正規化、延遲初始化、副作用等），
 
-詳細請見 @coverages.md
+詳細請見 `coverages.md`
 
 ## 已棄用／建議使用的 API（快速規則）
 

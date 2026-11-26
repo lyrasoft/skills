@@ -16,27 +16,27 @@ Provide shared development best practices for LYRASOFT projects so developers ca
 
 ## Scope and guidance
 
-- Windwalker ORM best practices (query grouping, typed entities, N+1 queries, duplicate-data protection): @references/windwalker/orm-best-practices.md
+- Windwalker ORM best practices (query grouping, typed entities, N+1 queries, duplicate-data protection): `references/windwalker/orm-best-practices.md`
 - Coding standards (`references/cs/`):
-  - BEM naming concepts and conventions: @references/cs/bem.md
-  - CSS / SCSS coding style: @references/cs/css-cs.md
-  - JS / TypeScript coding style: @references/cs/js-cs.md
-  - PHP coding style: @references/cs/php-cs.md
-  - SQL coding style and Query Builder: @references/cs/sql-cs.md
+  - BEM naming concepts and conventions: `references/cs/bem.md`
+  - CSS / SCSS coding style: `references/cs/css-cs.md`
+  - JS / TypeScript coding style: `references/cs/js-cs.md`
+  - PHP coding style: `references/cs/php-cs.md`
+  - SQL coding style and Query Builder: `references/cs/sql-cs.md`
 - Lint tools and usage (`references/cs/`):
-  - PHP linting and `php-cs-fixer` usage: @references/cs/php-lint.md
+  - PHP linting and `php-cs-fixer` usage: `references/cs/php-lint.md`
 - Structure and naming (`references/organizing/`):
-  - CSS / SCSS structure and organization: @references/organizing/css-scss-organizing.md
-  - PHP / Windwalker Service organization: @references/organizing/php-service-organizing.md
-  - Modern Vue project structure and syntax conventions: @references/organizing/vue-service-organizing.md
-  - VueI18n locale key naming conventions: @references/organizing/vuei18n-locale-key-naming.md
-  - Windwalker locale key naming conventions: @references/organizing/windwalker-locale-key-naming.md
+  - CSS / SCSS structure and organization: `references/organizing/css-scss-organizing.md`
+  - PHP / Windwalker Service organization: `references/organizing/php-service-organizing.md`
+  - Modern Vue project structure and syntax conventions: `references/organizing/vue-service-organizing.md`
+  - VueI18n locale key naming conventions: `references/organizing/vuei18n-locale-key-naming.md`
+  - Windwalker locale key naming conventions: `references/organizing/windwalker-locale-key-naming.md`
 - Styling (`references/styling/`):
-  - Bootstrap SCSS customization and variable overrides: @references/styling/bootstrap-scss.md
-  - Bootstrap Dark Mode best practices: @references/styling/bootstrap-dark-mode.md
-  - Design System implementation standards: @references/styling/design-system.md
+  - Bootstrap SCSS customization and variable overrides: `references/styling/bootstrap-scss.md`
+  - Bootstrap Dark Mode best practices: `references/styling/bootstrap-dark-mode.md`
+  - Design System implementation standards: `references/styling/design-system.md`
 - Review (`references/review/`):
-  - PHP code review guidance: @references/review/review-php.md
+  - PHP code review guidance: `references/review/review-php.md`
 - Deliberately out of scope: framework installation, deployment configuration, and private rules for a single project.
 
 ## Expected behavior

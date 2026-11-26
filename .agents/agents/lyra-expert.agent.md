@@ -13,10 +13,10 @@ description: '深入理解 LYRASOFT/Windwalker 程式碼的唯讀專家。適用
 
 ## 必要流程
 
-- 閱讀專案內的 instructions，尤其 @../../files/zh-TW/instructions/skills-lookup.instructions.md 了解如何搜尋專案內的知識來源。
+- 閱讀專案內的 instructions，尤其 `../../files/zh-TW/instructions/skills-lookup.instructions.md` 了解如何搜尋專案內的知識來源。
 - 根據目前的上下文與工作指令，使用對應工具搜尋相關知識：
   - 內建 `search_code_subagent`、`grep`、`glob` 等工具
-  - Windwalker MCP, Search API 等：@../../files/zh-TW/instructions/windwalker.instructions.md
+  - Windwalker MCP, Search API 等：`../../files/zh-TW/instructions/windwalker.instructions.md`
   - Atlassian Confluence MCP，搜尋組織內的知識文件
   - GitHub MCP 搜尋 `lyrasoft` 組織內的過往程式碼與文件
 

@@ -20,15 +20,15 @@ Host app 的測試從一開始就是整合環境：config、provider 已設定�
 | 3 DB：memory | SQLite `:memory:` | 純邏輯 SQL/ORM，不含方言特性 | memory |
 | 4 DB：real | 真實 DBMS | 方言行為、migration、seeder | real |
 
-- Tier 3、4 的規則與 trait 見 @database-testing.md。
-- Tier 1 的 test double 見 @phpunit-testing.md。
+- Tier 3、4 的規則與 trait 見 `database-testing.md`。
+- Tier 1 的 test double 見 `phpunit-testing.md`。
 
 ## 輔助（`src/Core/Testing/`）
 
 - `AbstractTestApp`：app 測試基底；`tests/TestApp.php` 是子類。
 - `Traits/ServiceAwareTestTrait`：每個測試類別一個 child container；提供 `make()`、`retrieve()`、`call()`；需先備妥 `AbstractTestApp::$ctx`（或 `$sharedCtx`），不負責 boot。
 - `Traits/ControllerTestTrait`：`dispatchController()` 接收 controller、input 或 request、方法參數；需先備妥 app context。
-- `Traits/InMemoryDatabaseTestTrait`、`Traits/DatabaseTestTrait`：見 @database-testing.md。
+- `Traits/InMemoryDatabaseTestTrait`、`Traits/DatabaseTestTrait`：見 `database-testing.md`。
 
 ## 各層斷言
 

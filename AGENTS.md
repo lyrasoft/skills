@@ -9,7 +9,7 @@
 
 ## 指引
 
-本專案的 AI 與協作者作業規範請見 @./.agents/main.instructions.md
+本專案的 AI 與協作者作業規範請見 `./.agents/main.instructions.md`
 
 重點方向：
 

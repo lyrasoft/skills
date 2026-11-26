@@ -4,7 +4,7 @@ agent: ''
 
 ## 指令
 
-開始前，閱讀 @../instructions/instruction.instructions.md 內的規範，理解正確的文件結構、命名規則與連結方式。
+開始前，閱讀 `../instructions/instruction.instructions.md` 內的規範，理解正確的文件結構、命名規則與連結方式。
 
 將使用者指定的檔案精簡成簡單版的 Best Practice，不用說明前因後果，只要說明什麼是推薦寫法，Bad & Good，什麼去哪參考詳細介紹。
 

@@ -4,7 +4,7 @@
 
 在真實瀏覽器中，針對本機開發伺服器驗證需要實際互動的前端行為（表格工具列按鈕、對話框、表單）。
 
-需要登入的 Windwalker 流程（認證檔案、session cookie、session 橋接等）請見 @e2e-windwalker-auth.md。
+需要登入的 Windwalker 流程（認證檔案、session cookie、session 橋接等）請見 `e2e-windwalker-auth.md`。
 
 ## 前置條件
 
@@ -24,7 +24,7 @@
    ```
 
    回傳的 PID 可能是啟動器而非實際監聽的程序。請用 `Get-NetTCPConnection -LocalPort 8089 -State Listen` 找出真正的 PID，並只停止該程序（`Stop-Process -Id <PID>`）。
-- **準備登入（若測試需要）**：見 @e2e-windwalker-auth.md。
+- **準備登入（若測試需要）**：見 `e2e-windwalker-auth.md`。
 - **複製並調整腳本**：將 `../assets` 複製到 `tmp/e2e/`，依專案與測試情境調整後執行。
 - **清理**：刪除 `.mjs` 腳本與日誌，並只停止你自己啟動的伺服器。保留 `.env.agent.local`。
 

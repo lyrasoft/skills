@@ -25,16 +25,16 @@ description: 共用的 Test 技能，可以從這裡入口尋找測試相關的�
 
 ## 測試相關知識與規範
 
-- 所有測試工作共同的知識 @references/test-common.md
-- PHP / Windwalker 框架之測試 @references/windwalker-testing.md
-  - PhpUnit 測試規範與指引 @references/phpunit-testing.md
-  - App 測試（層級、自動重置、request 範圍、輔助 trait）@references/app-testing.md
-  - 資料庫測試（InMemory、真實 DBMS）@references/database-testing.md
-  - Coverage 規範與指引 @references/coverages.md
-  - Smoke Test / 暫存執行檔規範與指引 @references/smoke-test.md
-- E2e / Playwright 測試規範與指引 @references/e2e-testing.md
-  - Windwalker 登入流程（認證檔案、session cookie、session 橋接）@references/e2e-windwalker-auth.md
-  - 暫存前端頁面（無現有頁面渲染待測目標時）@references/frontend-scratch-page.md
+- 所有測試工作共同的知識 `references/test-common.md`
+- PHP / Windwalker 框架之測試 `references/windwalker-testing.md`
+  - PhpUnit 測試規範與指引 `references/phpunit-testing.md`
+  - App 測試（層級、自動重置、request 範圍、輔助 trait）`references/app-testing.md`
+  - 資料庫測試（InMemory、真實 DBMS）`references/database-testing.md`
+  - Coverage 規範與指引 `references/coverages.md`
+  - Smoke Test / 暫存執行檔規範與指引 `references/smoke-test.md`
+- E2e / Playwright 測試規範與指引 `references/e2e-testing.md`
+  - Windwalker 登入流程（認證檔案、session cookie、session 橋接）`references/e2e-windwalker-auth.md`
+  - 暫存前端頁面（無現有頁面渲染待測目標時）`references/frontend-scratch-page.md`
 
 ## 驗證
 

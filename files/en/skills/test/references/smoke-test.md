@@ -60,7 +60,7 @@
 - Applicable when real HTTP requests, request-scoped services, or rendered HTML are needed.
 - Temporary components: controller and route; add middleware only when the behavior belongs to the request pipeline.
 - They must be placed in normal application locations to participate in autoloading and routing (they may appear in Git status).
-- This refers to static HTML rendering tests; for E2E testing, see @e2e-testing.md.
+- This refers to static HTML rendering tests; for E2E testing, see `e2e-testing.md`.
 
 Generator help:
 

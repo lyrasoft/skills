@@ -60,7 +60,7 @@
 - 適用：需要真實 HTTP 請求、請求範圍服務或渲染 HTML
 - 臨時元件：controller 與 route；行為屬於請求管線時再加 middleware
 - 必須放在一般應用程式位置才能參與 autoload 與路由（可能出現在 Git 狀態中）
-- 這裡指的是靜態 HTML 渲染測試，若需要 E2E 測試請見 @e2e-testing.md
+- 這裡指的是靜態 HTML 渲染測試，若需要 E2E 測試請見 `e2e-testing.md`
 
 產生器說明：
 

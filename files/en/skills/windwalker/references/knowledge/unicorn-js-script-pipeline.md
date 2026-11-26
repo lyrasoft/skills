@@ -52,7 +52,7 @@ $this->unicornScript->data('user.tags', $selectedTags);
 Example (JS):
 
 ```ts
-import { data, route, trans } from '@windwalker-io/unicorn-next';
+import { data, route, trans } from '`windwalker-io/`unicorn-next';
 
 const tags = data('user.tags');
 const label = trans('user.edit.save');

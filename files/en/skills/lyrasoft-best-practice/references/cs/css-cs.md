@@ -12,7 +12,7 @@ The guidance below supplements the Airbnb rules. Since much of the second half o
 
 Use 2 spaces for indentation in all CSS, SASS, and LESS files.
 
-Four spaces are acceptable when writing CSS in HTML or PHP, since our HTML / PHP uses four-space indentation. This follows the same rule as @php-cs.md.
+Four spaces are acceptable when writing CSS in HTML or PHP, since our HTML / PHP uses four-space indentation. This follows the same rule as `php-cs.md`.
 
 ## Rule declarations
 

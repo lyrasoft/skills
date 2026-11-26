@@ -35,7 +35,7 @@
 
 ## 大型專案的處理方式
 
-當 Service 過大（如 ProjectService、ProjectRunnerService、ProjectTaskService 各有 20 幾個方法，或 read / write 混在一起）時，改用角色命名拆分。命名概念類似 Vue 專案，參考 @vue-service-organizing.md
+當 Service 過大（如 ProjectService、ProjectRunnerService、ProjectTaskService 各有 20 幾個方法，或 read / write 混在一起）時，改用角色命名拆分。命名概念類似 Vue 專案，參考 `vue-service-organizing.md`
 
 | 角色 | 職責 | 命名範例 |
 | --- | --- | --- |

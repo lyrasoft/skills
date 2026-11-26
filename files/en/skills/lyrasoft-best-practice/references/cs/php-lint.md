@@ -13,7 +13,7 @@ Projects generally have `friendsofphp/php-cs-fixer` preinstalled, with a `.php-c
 
 If these scripts are unavailable, try running `vendor/bin/php-cs-fixer` directly.
 
-LYRASOFT uses PER coding style. For details, see @./php-cs.md
+LYRASOFT uses PER coding style. For details, see `./php-cs.md`
 
 ## Usage
 

@@ -1,6 +1,6 @@
 # E2E：Windwalker 登入獲認證方式
 
-本文件說明在 Windwalker 專案中做 Playwright E2E 測試時，如何取得並注入登入狀態。一般的 E2E 流程請見 @e2e-testing.md。
+本文件說明在 Windwalker 專案中做 Playwright E2E 測試時，如何取得並注入登入狀態。一般的 E2E 流程請見 `e2e-testing.md`。
 
 ## 選擇登入方式
 

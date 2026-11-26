@@ -12,7 +12,7 @@ LYRASOFT SCSS 相關編碼風格遵循 [AirBnb CSS/Sass Styleguide](https://gith
 
 CSS, SASS, LESS 所有檔案統一之縮排為 2 spaces。
 
-但寫在 HTML 或 PHP 內的可接受 4 spaces。 (因我們的 HTML / PHP 依然使用 4 spaces)，此部份規則同 @php-cs.md
+但寫在 HTML 或 PHP 內的可接受 4 spaces。 (因我們的 HTML / PHP 依然使用 4 spaces)，此部份規則同 `php-cs.md`
 
 ## 規則宣告
 

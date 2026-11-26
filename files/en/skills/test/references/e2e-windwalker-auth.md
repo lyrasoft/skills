@@ -1,6 +1,6 @@
 # E2E: Windwalker login and authentication methods
 
-This document explains how to obtain and inject login state when running Playwright E2E tests in Windwalker projects. For the general E2E workflow, see @e2e-testing.md.
+This document explains how to obtain and inject login state when running Playwright E2E tests in Windwalker projects. For the general E2E workflow, see `e2e-testing.md`.
 
 ## Choose a login method
 

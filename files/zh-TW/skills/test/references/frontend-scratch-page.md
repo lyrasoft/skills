@@ -14,7 +14,7 @@
 - 若為 PHP + JS 協作（PHP 註冊或輸出 JS 依賴的內容，或 JS 預期 PHP 先完成設定）：
   - 閱讀 Windwalker 文件，語意搜尋 `php js script pipeline`，可能有多個文件要綜合閱讀。
   - 查看 instructions ，決定適用的流程、建置步驟或初始化腳本。
-  - 查看 @e2e-testing.md / @e2e-windwalker-auth.md 確認是否需要前端測試環境。
+  - 查看 `e2e-testing.md` / `e2e-windwalker-auth.md` 確認是否需要前端測試環境。
 - 以 `grep` 找出使用者（class 名稱、tag 名稱或 import）。
 
 ## 選擇方式
@@ -39,7 +39,7 @@
    ```
 
 2. 在產生的 route 檔案中填入 view class 名稱。
-3. 在產生的空白檔案（可能是 blade 或 ts）放入測試用 HTML 與 JS，然後在瀏覽器開啟該 route（@e2e-testing.md）。
+3. 在產生的空白檔案（可能是 blade 或 ts）放入測試用 HTML 與 JS，然後在瀏覽器開啟該 route（`e2e-testing.md`）。
 4. 測試完成後，刪除產生的 view、route 項目與檔案，以及殘留的暫存程式碼。不要把暫存頁面留在 repository 中。
 
 ## 相關文件

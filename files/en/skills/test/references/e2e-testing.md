@@ -4,7 +4,7 @@
 
 Use a real browser to verify frontend behavior that requires interaction (table toolbar buttons, dialogs, forms) against a local development server.
 
-For Windwalker flows that require login (credential file, session cookie, session bridge, etc.), see @e2e-windwalker-auth.md.
+For Windwalker flows that require login (credential file, session cookie, session bridge, etc.), see `e2e-windwalker-auth.md`.
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ For Windwalker flows that require login (credential file, session cookie, sessio
    ```
 
    The returned PID may belong to a launcher rather than the process actually listening. Use `Get-NetTCPConnection -LocalPort 8089 -State Listen` to find the real PID, and stop only that process (`Stop-Process -Id <PID>`).
-- **Prepare login (if needed)**: see @e2e-windwalker-auth.md.
+- **Prepare login (if needed)**: see `e2e-windwalker-auth.md`.
 - **Copy and adjust the script**: copy `../assets` to `tmp/e2e/`, adjust it for the project and test scenario, then run it.
 - **Cleanup**: delete the `.mjs` script and logs, and stop only the server you started. Keep `.env.agent.local`.
 

@@ -12,12 +12,12 @@ When a user asks to "add rules to instructions / skills / docs", use these crite
 - `skills`: Shared skills and templates
 - `docs`: Long-form documentation and templates
 
-For details, see @../main.instructions.md#guidance-document-directory
+For details, see `../main.instructions.md#guidance-document-directory`
 
 ## Editing principles
 
 - File links:
-  - Use the `@relative/path` format for important file links or guidance. When adding descriptive text after a link in a list, prefer `- @link Text`, unless the preceding phrase is an imperative.
+  - Use the `relative/path` format for important file links or guidance. When adding descriptive text after a link in a list, prefer `- `link` Text`, unless the preceding phrase is an imperative.
   - When a heading is needed, use a Markdown link: `[display text](relative path)`.
   - In general prose, decide whether to link to a file based on context. Use backticks when simply mentioning a filename or file type.
   - Use the `<URL>` format for remote URLs. When adding brief descriptive text, put it after the URL in the form `- <URL> Text`, unless the preceding phrase is an imperative.

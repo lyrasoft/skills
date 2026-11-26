@@ -13,18 +13,18 @@
 
 ## 其他
 
-- 若需要 smoke test 或編寫臨時性測試文件，盡量放置於專案的 `tmp/` 目錄下。見 @smoke-test.md
+- 若需要 smoke test 或編寫臨時性測試文件，盡量放置於專案的 `tmp/` 目錄下。見 `smoke-test.md`
 - 測試需要暫存檔案或目錄時：
   - 用專案 `tmp/`（`WINDWALKER_TEMP`，預設 `WINDWALKER_ROOT . '/tmp'`），不用 `sys_get_temp_dir()`／`tempnam()`，也不放專案根目錄。
   - 路徑如 `WINDWALKER_TEMP . '/ww-test-' . uniqid()`。
   - 在 `#[Before]` 建立，在 `#[After]`（或 shutdown function）移除。
-- App 測試（層級、自動重置、request 範圍、輔助 trait）見 @app-testing.md
+- App 測試（層級、自動重置、request 範圍、輔助 trait）見 `app-testing.md`
 
 ## 文件
 
 - Windwalker 提供測試輔助功能，請預先觀看: https://windwalker.io/documentation/framework/services/testing.md
 - Windwalker 文件搜尋可使用 MCP `windwalker-docs-search`，或查閱公開文件索引: https://windwalker.io/llms.txt
-- PhpUnit 文件請見 @phpunit-testing.md
+- PhpUnit 文件請見 `phpunit-testing.md`
 - 其他相關文件請參考專案的 instructions 或 docs/ 目錄。
 
 ## 相關文件

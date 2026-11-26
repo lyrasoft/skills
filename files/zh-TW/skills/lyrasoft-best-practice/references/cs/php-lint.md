@@ -13,7 +13,7 @@
 
 如果沒有這兩個指令，可以嘗試用 `vendor/bin/php-cs-fixer` 來執行。
 
-LYRASOFT 使用 PER Code Style，詳細請見 @./php-cs.md
+LYRASOFT 使用 PER Code Style，詳細請見 `./php-cs.md`
 
 ## 執行方式
 

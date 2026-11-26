@@ -12,7 +12,7 @@
 - 範例：
 
 ```php
-$path = $this->container->get(PathResolver::class)->resolve('@temp/cache');
+$path = $this->container->get(PathResolver::class)->resolve('`temp/`cache');
 $path = $this->app->service(PathResolver::class)->resolve('@migrations');
 ```
 

@@ -28,7 +28,7 @@
 
 ## Where to look
 
-- Build entries, aliases, output paths, and manifest: @../knowledge/frontend-and-assets.md
-- The `~` alias (maps to `resources/assets`) and asset paths: @../knowledge/frontend-and-assets.md
+- Build entries, aliases, output paths, and manifest: `../knowledge/frontend-and-assets.md`
+- The `~` alias (maps to `resources/assets`) and asset paths: `../knowledge/frontend-and-assets.md`
 - Official documentation: [Vue Development](https://windwalker.io/documentation/framework/frontend/vue.html)
 - For other documentation searches, use the `windwalker-docs-search` MCP tool.
