@@ -22,8 +22,10 @@
 
 ## 組織
 
+- [LYRASOFT 最佳實踐](lyrasoft-best-practice/SKILL.md)
+- [Windwalker](windwalker/SKILL.md)
 - [test](test/SKILL.md)：新增、更新與執行 PHPUnit 測試的流程
-- `templates`: 共用的技能與指引起始模板
+- [templates](templates/)：共用的技能與指引起始模板
 
 ## 維護
 

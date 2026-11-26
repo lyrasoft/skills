@@ -6,6 +6,7 @@
   - <https://windwalker.io/llms.txt> LLMS.txt
   - <https://docs-search.windwalker.io/search> Search API - POST JSON: `{"messages": [{"role": "user","content": "Search text..."}]}`
   - MCP tool `windwalker-docs-search`
+  - Chat API <POST https://docs-search.windwalker.io/chat/completions> - OpenAI Chat Completions API
   - @./skills-lookup.instructions.md 更多遠端文件搜尋管道
 - 優先閱讀 @../skills/windwalker/SKILL.md 了解 Windwalker 開發技能清單，並依照技能清單的分類與指引進行開發。
 - @../skills/windwalker/references/development-app/mvc-generation.md MVC 模組產生器

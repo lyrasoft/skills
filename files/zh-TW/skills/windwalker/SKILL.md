@@ -28,6 +28,7 @@ description: Windwalker 框架的技能，提供 Windwalker 專案開發相關�
 
 - Windwalker 官方文件: <https://windwalker.io/llms.txt>
   - Windwalker Search API: <https://docs-search.windwalker.io/search> - POST JSON: `{"messages": [{"role": "user","content": "Search text..."}]}`
+  - Chat API <POST https://docs-search.windwalker.io/chat/completions> - OpenAI Chat Completions API
   - Search MCP Tools: `windwalker-docs-search`
 - 核心知識 @references/knowledge/
   - 可用的 CLI 指令與使用方式: @references/knowledge/commands.md
