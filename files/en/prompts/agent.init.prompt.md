@@ -1,18 +1,11 @@
-# Prompt: initialize repo guidance
+# Prompt: initialize repository guidance
 
-Use this prompt when setting up a repository with basic AI and contributor guidance.
+Use this prompt when creating basic AI and contributor guidance for a repository.
 
-```text
-Review the repository and identify its real purpose, structure, and documentation patterns. Create or update AGENTS.md and any relevant repo guidance so future contributors can understand the project quickly.
+Inspect the repository and confirm its actual purpose, structure, and documentation patterns. Create or update `AGENTS.md` and relevant repository guidance so future contributors can quickly understand the project.
 
-Requirements:
-1. Inspect the repository before writing guidance.
-2. Keep the instructions aligned with the actual project, not a generic template.
-3. Prefer a minimal, useful structure over a large documentation set.
-4. Keep content markdown-only and repository-appropriate.
-5. Add only guidance that supports safe, effective future work.
-6. Preserve useful existing guidance when present.
-7. Keep the final result concise and easy to maintain.
-```
-
-This prompt is intended for markdown-based knowledge repos and shared instruction stores.
+- Create or adjust `.github/copilot-instructions.md`, add a link to @../main.instructions.md, and provide a brief description of the project.
+- The root `AGENTS.md` should also link to @../main.instructions.md and provide a brief description of the project.
+- @../instructions/architecture.instructions.md describes the project structure and is empty by default. Read and analyze the project's structure, then explain it in this file.
+  - If the project is large, put the detailed structure description in `docs/architecture.md`. This file need not be a concise bullet list; it can explain the directory structure, main modules, core features, and dependencies in detail.
+- Based on the project's actual needs, create or update other guidance files in the `instructions` directory and link to them from @../main.instructions.md.

@@ -1,14 +1,19 @@
-# Skill template
+---
+name: name
+description:
+---
+
+# Skill: name
 
 ## Purpose
 
-Describe the reusable skill in one or two sentences. Explain what problem it solves and which situations it is intended for.
+Describe this reusable skill in one or two sentences, explaining the problem it solves and the situations it applies to.
 
 ## When to use
 
-- scenario 1
-- scenario 2
-- scenario 3
+- Scenario 1
+- Scenario 2
+- Scenario 3
 
 ## Scope
 
@@ -16,13 +21,13 @@ Describe what this skill covers and what it intentionally does not cover.
 
 ## Expected behavior
 
-1. Inspect the relevant files or repository context.
-2. Identify the narrow goal and constraints.
-3. Apply the appropriate workflow or pattern.
-4. Keep the result concise, clear, and aligned with project conventions.
+- Inspect relevant files or repository context.
+- Confirm the explicit goal and constraints.
+- Apply an appropriate workflow or pattern.
+- Keep the result concise, clear, and consistent with project conventions.
 
 ## Validation
 
-- result matches the requested task and repository context
-- no unnecessary or unrelated changes were introduced
-- instructions remain concise and reusable
+- The result meets the task requirements and fits the repository context.
+- No unnecessary or unrelated changes have been introduced.
+- The instructions remain concise and reusable.

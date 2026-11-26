@@ -1,25 +1,14 @@
-# Instruction guidelines
+# Instructions directory
 
-This directory stores the "instruction layer" of the shared toolkit. It contains repository-level rules, constraints, routing logic, and required operational guidance.
+Add entries as needed:
 
-## Purpose
-
-- keep the essential instruction rules in one place
-- maintain a concise and readable `main.instructions.md`
-- clearly separate rules, skills, long-form documents, and prompts
-- leave a scalable entry point for future instruction additions
-
-## Contents
-
-- [instruction.instructions.md](instruction.instructions.md): explains how to route content between `instructions`, `skills`, `docs`, and `prompts`
-- [test-common.instructions.md](test-common.instructions.md): PHPUnit test-writing conventions for PHP test files
-- [test-coverage.instructions.md](test-coverage.instructions.md): mandatory rules for `@codeCoverageIgnore` and untestable branches
-- additional repo-level guidance files can be added here as new topics emerge
-
-## Principles
-
-- `instructions/` is not a catch-all folder; it should contain only necessary rules and standards
-- content should stay short, explicit, and easy to scan
-- long-form background or reference material belongs in `docs/`
-- reusable workflows belong in `skills/`
-- reusable task templates belong in `prompts/`
+- @./architecture.instructions.md: Project structure and directory overview
+- @./instruction.instructions.md: Rules and principles for writing instructions, skills, and docs
+- @./test.instructions.md: Testing guidance
+- @./windwalker.instructions.md: Windwalker development guidance
+- @./e2e.instructions.md: E2E testing guidance
+- @./cs.instructions.md: Code style guidance
+- @./services.instructions.md: Services and DI organization guidance
+- @./i18n.instructions.md: Internationalization guidance
+- @./assets.instructions.md: Frontend assets and build guidance
+- @./cli.instructions.md: CLI command guidance

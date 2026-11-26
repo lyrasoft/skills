@@ -1,80 +1,40 @@
-# instruction.instructions.md
+# Guidance for writing instructions
 
 ## Purpose
 
-When a user asks to add certain rules into `instruction`, `skills`, or `docs`, this does not mean everything should be stuffed into `instructions`. The right approach is to split content by its nature, scope, and reusability.
-
-This file defines the routing rule so `main.instructions.md` stays concise and actionable instead of turning into a giant catch-all document.
+When a user asks to add rules to `instructions`, `skills`, or `docs`, that does not mean everything should be put in `instructions`. Instead, divide the content among the most suitable locations according to the nature and frequency of use of the rules.
 
 ## Classification rules
 
-### 1. `instructions`: mandatory, global, and high-priority rules
+When a user asks to "add rules to instructions / skills / docs", use these criteria:
 
-Put content here when it is:
+- `instructions`: Repository-level rules and content-routing guidance
+- `skills`: Shared skills and templates
+- `docs`: Long-form documentation and templates
 
-- project-wide baseline rules and principles
-- required workflows or hard constraints
-- language requirements (for example, default bilingual Chinese + English writing)
-- file naming conventions and repository structure rules
-- security, confidentiality, and forbidden content policies
-- repo-level standards that every contributor or AI agent must follow
+For details, see @../main.instructions.md#guidance-document-directory
 
-These items should be short, clear, and mandatory.
+## Editing principles
 
-### 2. `skills`: reusable abilities and task patterns
+- File links:
+  - Use the `@relative/path` format for important file links or guidance. When adding descriptive text after a link in a list, prefer `- @link Text`, unless the preceding phrase is an imperative.
+  - When a heading is needed, use a Markdown link: `[display text](relative path)`.
+  - In general prose, decide whether to link to a file based on context. Use backticks when simply mentioning a filename or file type.
+  - Use the `<URL>` format for remote URLs. When adding brief descriptive text, put it after the URL in the form `- <URL> Text`, unless the preceding phrase is an imperative.
+- Use concise bullet points; avoid too much background unless the behavior has a specific context or constraint.
+- Avoid sensitive information, product confidential information, deployment settings, and keys.
 
-Put content here when it is:
+### Skills writing principles
 
-- a repeatable task process
-- a reusable method or operating pattern
-- a skill definition with purpose, use case, expected behavior, and validation
-- a workflow that can be reused across multiple tasks or repositories
+See the public guidelines:
 
-If the content is "how to do a thing" and can be reused, it belongs in `SKILL.md`, not in `instructions`.
+- <https://www.skillsdirectory.com/docs/writing-effective-skills> Writing Effective Skills
+- <https://www.skillsdirectory.com/docs/skill-md-format> Skill MD Format
+- <https://www.skillsdirectory.com/docs/skill-file-structure> Skill File Structure
 
-### 3. `docs`: background, explanations, and long-form references
+## Validation
 
-Put content here when it is:
-
-- long-form context or historical background
-- system architecture or design explanations
-- onboarding notes and process documentation
-- examples, case studies, reference material, and operational explanations
-
-If the content is "why this exists" or "long-form reference material", it belongs in `docs`, not in `instructions`.
-
-### 4. `prompts`: reusable task templates
-
-Put content here when it is:
-
-- a reusable prompt template
-- a task launcher or execution scaffold
-- a standard AI prompt for common repository or workflow operations
-
-This is not rule content and not a skill definition; it is a reusable execution template.
-
-## Decision rule
-
-When the user says "add this rule to instruction / skills / docs", use the following logic:
-
-- if it is a mandatory repo-wide rule → `instructions`
-- if it is a reusable operating pattern or capability → `skills`
-- if it is background, explanation, or long-form reference → `docs`
-- if it is a reusable task template → `prompts`
-
-## Principles
-
-- Do not put everything into `instructions`
-- Keep `instructions` short, mandatory, and easy to scan
-- Put long-form explanations in `docs`
-- Extract reusable workflows into `skills`
-- Only promote content to a skill when it is genuinely reusable and modular
-
-## Examples
-
-- "All content must be Markdown" → `instructions`
-- "How to create a repo-init skill" → `skills`
-- "Company AI collaboration background and onboarding context" → `docs`
-- "A reusable prompt for repo initialization" → `prompts`
-
-This keeps `instructions` focused, `skills` reusable, and `docs` maintainable. 
+- The content remains Markdown-only.
+- The guidance remains general and reusable.
+- The saved content remains aligned with the shared company knowledge base.
+- The project does not gradually become a private database for a single product or project.

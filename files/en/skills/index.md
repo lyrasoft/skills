@@ -22,8 +22,10 @@ In other words, if a file is a skill itself, name it `SKILL.md` rather than `REA
 
 ## Organization
 
+- [LYRASOFT Best Practices](lyrasoft-best-practice/SKILL.md)
+- [Windwalker](windwalker/SKILL.md)
 - [test](test/SKILL.md): workflow for adding, updating, and running PHPUnit tests
-- `templates`: shared starter templates for skills and guidance
+- [templates](templates/): shared starter templates for skills and guidance
 
 ## Maintenance
 

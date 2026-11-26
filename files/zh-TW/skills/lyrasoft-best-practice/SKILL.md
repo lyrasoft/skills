@@ -23,6 +23,8 @@ description: LYRASOFT 專案開發最佳實踐，涵蓋 Windwalker ORM、程式�
   - JS / TypeScript 程式碼風格：@references/cs/js-cs.md
   - PHP 程式碼風格：@references/cs/php-cs.md
   - SQL 程式碼風格與 Query Builder：@references/cs/sql-cs.md
+- Lint 工具與使用方式（`references/cs/`）：
+  - PHP Lint 與 `php-cs-fixer` 使用方式：@references/cs/php-lint.md
 - 結構與命名（`references/organizing/`）：
   - CSS / SCSS 結構與組織方式：@references/organizing/css-scss-organizing.md
   - PHP / Windwalker Service 組織方式：@references/organizing/php-service-organizing.md

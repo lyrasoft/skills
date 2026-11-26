@@ -10,7 +10,7 @@ applyTo: '**'
 - Windwalker 官方文件：
   - LLMS.txt <https://windwalker.io/llms.txt>
   - Search API <https://docs-search.windwalker.io/search> - POST JSON: `{"messages": [{"role": "user","content": "Search text..."}]}`
-  - Chat API <POST https://docs-search.windwalker.io/chat/completions> - OpenAI Chat Completions API
+  - Chat API <https://docs-search.windwalker.io/chat/completions> - OpenAI Chat Completions API
   - MCP tool `windwalker-docs-search`
 - Confluence / LYRASOFT Wiki 搜尋：
   - MCP tool `com.atlassian/atlassian-mcp-server`

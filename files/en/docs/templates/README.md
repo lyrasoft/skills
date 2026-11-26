@@ -1,13 +1,13 @@
 # Document templates
 
-This directory stores shared templates for internal and cross-project documentation work.
+This directory stores shared document templates for internal and cross-project documentation.
 
 ## Use cases
 
-- onboarding guidance
-- team conventions
-- repository guidance
-- reusable instruction sets
+- Onboarding guidance
+- Team conventions
+- Repository guidance
+- Reusable sets of instructions
 
 ## Suggested structure
 
@@ -23,4 +23,4 @@ This directory stores shared templates for internal and cross-project documentat
 ## Notes
 ```
 
-Templates should stay clear, generic, and easy to apply across different repositories and project environments.
+Templates should remain clear and generic, and be easy to apply across different repositories and project environments.

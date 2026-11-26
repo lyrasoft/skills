@@ -1,22 +1,13 @@
 # Documentation index
 
-This directory stores shared documentation for the knowledge base. Content should remain concise, reusable, and focused on company-level standards and collaboration guidance.
+This directory stores general-purpose documents for the shared knowledge base. Content should remain concise and reusable, and focus on company-level shared standards and collaboration guidance.
 
 ## Scope
 
-- shared company standards
-- reusable documentation templates
-- onboarding and collaboration notes
-- template references for future content
-
-## Language variants
-
-This repository includes parallel language variants:
-
-- `../zh-TW/`: Traditional Chinese version
-- `../en/`: English version
-
-Use the version that matches the project or team language, or maintain both when a bilingual workflow is preferred.
+- Company-wide shared standards
+- Reusable document templates
+- Onboarding and collaboration guidance
+- A template index for future content
 
 ## Organization
 
@@ -24,4 +15,4 @@ Use the version that matches the project or team language, or maintain both when
 
 ## Maintenance
 
-Update this index only when a truly new documentation category is needed. Keep the content neutral and reusable across projects, and maintain consistency with the shared company context.
+Update this index only when a new document category is genuinely needed. Keep the content neutral and reusable across projects, and maintain a consistent company-wide shared context.

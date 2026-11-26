@@ -1,72 +1,44 @@
-# Copilot instructions
+# Main agent guidance entry
 
 ## Purpose
 
-This project is the company-wide shared agent instruction library. It acts as a reusable knowledge base for AI collaboration, cross-project standards, and shared operating guidance.
+This file provides in-repository agent guidance, including operating rules and constraints for contributors and AI agents.
 
-## Language variants
+## Project overview
 
-The reusable toolkit is organized in language-specific folders:
-
-- `../zh-TW/`: Traditional Chinese version
-- `../en/`: English version
-
-These folders are intended to be copied into a project's `.github/` directory when the team needs repository guidance in one language or the other.
-
-## What belongs here
-
-- reusable cross-project skills and operating guidance
-- internal documentation templates and conventions
-- prompt templates for AI-assisted workflows
-- onboarding and repository setup guidance for teams
-
-Do not add product implementation docs, application source code, deployment scripts, secrets, or environment-sensitive configuration.
+See @../AGENTS.md
 
 ## Project structure
 
-- @../../README.md: Project overview and shared standards
-- @../../AGENTS.md: General guidance for contributors and AI agents
-- `instructions`: repository-level rules and content routing guidance
-- `SKILL.md`: formal definition of a reusable skill
-- `skills`: shared skills and templates
-- `docs`: internal documentation and templates
-- `prompts`: AI workflow prompt templates
+See @instructions/architecture.instructions.md
 
-## File role separation
+## Guidance document directory
 
-- `README.md`: Entry point, overview, and index
-- `AGENTS.md`: Repository-level rules and constraints for AI and contributors
-- `SKILL.md`: defines a skill, including purpose, use cases, expected behavior, and validation
-- `*.prompt.md`: reusable prompt templates
-- `docs`: documentation, templates, and long-form reference material; load only when needed
+- @README.md: Project overview and shared standards
+- @AGENTS.md: Basic guidance for contributors and AI agents
+- `instructions`: Repository-level rules and content-routing guidance
+  - Keep these as concise bullet points that direct tasks to the appropriate documents.
+  - They may be split by task type and file applicability, using `applyTo:` front matter to specify where they apply.
+  - They may point to remote documents or MCP tools; search for and read task-relevant material before starting whenever possible.
+  - @./instructions/README.md: Instructions overview and entry point
+- `skills`: Shared skills and templates
+  - Composable skills that include multi-step workflows, examples, and resources
+  - Can be installed or copied from remote sources as needed to enable a capability
+  - May include different skills for different task types
+  - @./skills/index.md: Skills overview and entry point
+  - @./skills/<name>/references/: References related to a skill
+- `docs`: Long-form documents and templates
+  - Load only when needed; may contain framework and library documentation, project knowledge, or operating procedure (SOP) material.
+  - @./docs/index.md: Documentation overview and entry point
+- `prompts`: AI workflow prompts
 
-## Docs sections / lazy-loading guidance
+### Docs sections and long-document loading rules
 
-`docs` may contain longer reference documents. Use a lazy-loading approach: do not read the full folder up front unless the task clearly requires it.
+`docs` may contain longer reference documents. Follow a just-in-time loading approach; do not read the entire directory up front:
 
-- @docs/index.md: overview and section index; start here to identify which document is relevant.
-- `docs/templates/`: templates, doc structure, and writing conventions; read this when creating or revising documentation.
-- When adding a new docs category, update this section list so future work knows when to load it.
-- If unsure which doc to read, start with @docs/index.md and then open only the topic-specific file needed for the current task.
+- @docs/index.md: Start here for the document overview and section index to quickly determine what is relevant.
+- `docs/templates/`: Document templates, structure, and writing guidance; consult this when creating or revising documents.
+- When adding a docs category, update this section so future users know when to load it.
+- If unsure which document to read, start with @docs/index.md, then locate only the relevant long-form document for the topic.
 
-Keep these sections short, durable, and expandable so future documentation categories can be added without rewriting the instruction file.
-
-## Editing principles
-
-- keep everything in Markdown
-- when linking to other files in a list, you can use the Markdown link format `[display text](relative path)` at the beginning; when simply mentioning a file name or file type, you can use backticks.
-- prefer neutral, reusable language
-- avoid customer-, product-, or team-specific details unless they are explicitly required as examples
-- keep templates concise and easy to copy into other repositories
-- maintain clear folder responsibilities and avoid unrelated content
-- keep the shared company context consistent across the documentation
-- when no language is specified, default to bilingual Chinese + English content unless the request asks for one language only
-
-## Validation
-
-Before finalizing a change, confirm that:
-
-- the content remains markdown-only
-- the guidance stays generic and reusable
-- the material remains aligned with the shared-knowledge purpose
-- the repository does not drift into being a single-product or single-team private store
+Keep these sections concise and extensible so new documentation categories can be added without rewriting the whole file.
