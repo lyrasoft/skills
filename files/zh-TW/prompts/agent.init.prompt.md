@@ -1,18 +1,10 @@
-# Prompt: initialize repo guidance
+# 提示：初始化儲存庫指引
 
-Use this prompt when setting up a repository with basic AI and contributor guidance.
+在為儲存庫建立基本的 AI 與貢獻者指引時使用此提示。
 
-```text
-Review the repository and identify its real purpose, structure, and documentation patterns. Create or update AGENTS.md and any relevant repo guidance so future contributors can understand the project quickly.
+檢視儲存庫，確認其實際用途、結構與文件模式。建立或更新 AGENTS.md 及相關的儲存庫指引，讓未來的貢獻者能快速了解專案。
 
-Requirements:
-1. Inspect the repository before writing guidance.
-2. Keep the instructions aligned with the actual project, not a generic template.
-3. Prefer a minimal, useful structure over a large documentation set.
-4. Keep content markdown-only and repository-appropriate.
-5. Add only guidance that supports safe, effective future work.
-6. Preserve useful existing guidance when present.
-7. Keep the final result concise and easy to maintain.
-```
-
-This prompt is intended for markdown-based knowledge repos and shared instruction stores.
+- 建立或調整 `.github/copilot-instructions.md`，加上指向 @../main.instructions.md 的連結，並提供專案的簡短說明。
+- 根目錄的 `AGENTS.md` 也連結到 @../main.instructions.md，並提供專案的簡短說明。
+- @../instructions/architecture.instructions.md 是專案結構說明，預設是空的，請閱讀並分析本專案的結構，並在此檔案中提供說明。
+- 根據本專案的實際情況，建立或更新 instructions 資料夾內的其他指引文件，並在 @../main.instructions.md 中提供連結。
