@@ -4,7 +4,7 @@
 
 - 官方文件：
   - <https://windwalker.io/llms.txt> LLMS.txt
-  - <https://docs-search.windwalker.io/search> Search API
+  - <https://docs-search.windwalker.io/search> Search API - POST JSON: `{"messages": [{"role": "user","content": "Search text..."}]}`
   - MCP tool `windwalker-docs-search`
   - @./skills-lookup.instructions.md 更多遠端文件搜尋管道
 - 優先閱讀 @../skills/windwalker/SKILL.md 了解 Windwalker 開發技能清單，並依照技能清單的分類與指引進行開發。

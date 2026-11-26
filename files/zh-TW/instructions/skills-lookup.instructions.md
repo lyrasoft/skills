@@ -9,7 +9,7 @@ applyTo: '**'
 
 - Windwalker 官方文件：
   - LLMS.txt <https://windwalker.io/llms.txt>
-  - Search API <https://docs-search.windwalker.io/search>
+  - Search API <https://docs-search.windwalker.io/search> - POST JSON: `{"messages": [{"role": "user","content": "Search text..."}]}`
   - MCP tool `windwalker-docs-search`
 - Confluence / LYRASOFT Wiki 搜尋：
   - MCP tool `com.atlassian/atlassian-mcp-server`

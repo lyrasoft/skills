@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "windwalker-docs": {
+      "type": "http",
+      "url": "https://docs-search.windwalker.io/mcp"
+    }
+  }
+}
