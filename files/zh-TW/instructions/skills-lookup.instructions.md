@@ -59,7 +59,7 @@ Windwalker 內進行前端 js 開發或者 HTML / Blade / CSS / SCSS / Vue 套�
 若要修改 Windwalker Components / Core / Unicorn / Luna 套件，或者要開發新的 Packages 時，可以參考。
 
 - `./architecture.instructions.md` 整體專案架構指引。
-- `../skills/windwalker/references/development-core/package-development.md` 套件開發指引。
+- `../skills/lyrasoft-best-practice/references/packages/lyrasoft-package-develoment.md` LYRASOFT 套件開發指引。
 
 ## 建立或編輯 instructions / skills / docs 時
 

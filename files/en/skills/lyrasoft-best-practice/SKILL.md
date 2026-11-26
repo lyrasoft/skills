@@ -25,6 +25,8 @@ Provide shared development best practices for LYRASOFT projects so developers ca
   - SQL coding style and Query Builder: `references/cs/sql-cs.md`
 - Lint tools and usage (`references/cs/`):
   - PHP linting and `php-cs-fixer` usage: `references/cs/php-lint.md`
+- Package development (`references/packages/`):
+  - LYRASOFT Package development guide: `references/packages/lyrasoft-package-develoment.md`
 - Structure and naming (`references/organizing/`):
   - CSS / SCSS structure and organization: `references/organizing/css-scss-organizing.md`
   - PHP / Windwalker Service organization: `references/organizing/php-service-organizing.md`
