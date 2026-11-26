@@ -59,7 +59,7 @@ For frontend JS development or HTML / Blade / CSS / SCSS / Vue theming in Windwa
 For modifying Windwalker Components / Core / Unicorn / Luna packages, or developing new packages:
 
 - `./architecture.instructions.md` Overall project architecture guidance.
-- `../skills/windwalker/references/development-core/package-development.md` Package development guidance.
+- `../skills/lyrasoft-best-practice/references/packages/lyrasoft-package-develoment.md` LYRASOFT package development guidance.
 
 ## Creating or editing instructions / skills / docs
 
