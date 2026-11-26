@@ -29,7 +29,7 @@
   - 與上述欄位搭配的 Edit View / Form Fields 規劃。
   - 搭配的 Services，運作方式、存取策略等等。
   - 任何達成本次工作任務需要的相關程式規劃與流程
-- 建立一個 Markdown 計畫文件，命名為 `plan.<subject>.md`，放在專案 `tmp/plans/` 目錄
+- 建立一個 Markdown 計畫文件，命名為 `plan.<subject>.md`，放在專案 `.agents/plans/` 目錄 (除非使用者有指定其他位置)。
   - 包含上述規劃的所有內容，盡量讓章節層次清楚，使用簡單文字描述，清單條列等，讓使用者可以進行必要編輯。
   - 編輯後可以用這個計畫讓 agent 直接執行。
   - 計畫範本見 `../../assets/plan.Flower.example.md`，請依照此範本建立計畫文件。

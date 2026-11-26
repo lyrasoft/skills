@@ -32,6 +32,8 @@
 
 ### Indexes
 
+<!-- agent: 盡量條列且結構化格式，讓 User 可以修改 -->
+
 - Indexes
   - created
   - type,prefix
@@ -40,9 +42,11 @@
 
 ### 關聯表
 
-- （無 / 說明）
+<!-- agent: 依任務需求規劃關聯表，一樣要有 Entity 不能是純文字資料表名稱 -->
 
 ## Form Fields
+
+<!-- agent: 盡量條列且結構化格式，讓 User 可以修改 -->
 
 只列出手動指定的，其他欄位由產生器自動生成。
 
