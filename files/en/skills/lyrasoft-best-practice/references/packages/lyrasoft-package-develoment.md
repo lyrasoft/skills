@@ -1,19 +1,22 @@
 # LYRASOFT Package Development Guide
 
-## Git history
+For general package development guidance, see `../../../windwalker/references/development-core/package-development.md`.
 
-- Add a `.gitignore` file. You can use this shared version as a reference: <https://github.com/lyrasoft/luna/blob/master/.gitignore>
+This document covers additional procedures for LYRASOFT packages.
+
+## Development files in the package root
+
+- `.gitignore`: Use this shared version as a reference: <https://github.com/lyrasoft/luna/blob/master/.gitignore>
+- `README.md`: You can start with the package title.
+- `VERSION`: Start with `0.1.0`.
 
 ## Automatically updating package versions
 
 To make package versions easier to manage, use a prepared release command to update the version and Git tag.
 
-First, create a `VERSION` file in the package root and set its initial version, such as `1.0.0` or `0.1.0`:
+First, create a `VERSION` file in the package root and set its initial version, such as `0.1.0`.
 
-- For a feature-complete package ready for a stable release, use `1.0.0`. If it is still being tested, use `1.0.0-beta1`.
-- If the package is in early development and breaking changes are still expected, start with `0.1.0`. A `0.x` version indicates that the package is not yet stable and compatibility between versions is not guaranteed.
-
-Next, create a `bin/` directory in the package root. From that directory, download `Console.php` and `release.php`:
+Next, create a `bin/` directory in the package root, and download `Console.php` and `release.php` into it:
 
 ```shell
 wget https://raw.githubusercontent.com/asika32764/php-simple-console/master/src/Console.php
@@ -30,6 +33,8 @@ curl https://raw.githubusercontent.com/asika32764/php-simple-console/refs/heads/
 
 chmod +x release.php
 ```
+
+### Version update commands
 
 After updating the code, when preparing a new release, run this from the package root:
 
