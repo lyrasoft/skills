@@ -1,5 +1,5 @@
 ---
-agent: ''
+agent: 'master-writer'
 ---
 
 ## 指令

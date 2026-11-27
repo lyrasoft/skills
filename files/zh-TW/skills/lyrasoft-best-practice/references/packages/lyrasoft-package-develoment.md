@@ -2,17 +2,18 @@
 
 基本套件開發指引請見 `../../../windwalker/references/development-core/package-development.md`。
 
-本文件補充 LYRASOFT 套件的開發流程。
+本文件補充 LYRASOFT 套件的開發流程，請先依照上述標準流程完善工作後，再依本文件加入 LYRASOFT 專屬開發環境。
 
 ## 根目錄開發文件
 
-- `.gitignore`：可參考這份共用版本：<https://github.com/lyrasoft/luna/blob/master/.gitignore>
+- `.gitignore`：可參考這份共用版本：<https://raw.githubusercontent.com/lyrasoft/luna/refs/heads/master/.gitignore> 並依需求調整
+- `.gitattributes`： 範本 `../../assets/.gitattributes`，可依套件需求調整。
 - `README.md`：可先放上套件標題。
 - `VERSION`：從 `0.1.0` 開始。
 
 ## PHP-CS-Fixer 與 Git Hook
 
-套件使用 PHP-CS-Fixer 檢查與修正程式碼，並可選擇啟用 pre-commit hook，自動整理已暫存的 PHP 檔案。請將以下範本複製到套件根目錄的對應位置：
+套件可使用 PHP-CS-Fixer 檢查與修正程式碼，並選擇啟用 pre-commit hook 整理已暫存的 PHP 檔案。將以下範本複製到套件根目錄：
 
 | 範本 | 套件內位置 |
 | --- | --- |
@@ -21,7 +22,7 @@
 | [`cs-fixer.php`](../../assets/cs-fixer/cs-fixer.php) | `bin/cs-fixer.php` |
 | [`pre-commit`](../../assets/cs-fixer/pre-commit) | `.githooks/pre-commit` |
 
-此 PHP-CS-Fixer 設定會使用 Windwalker Core 的 `.php-cs-fixer.rules.php` 共用規則；範本會依序尋找套件旁的 `../core/.php-cs-fixer.rules.php`，以及套件內的 `vendor/windwalker/core/.php-cs-fixer.rules.php`。
+PHP-CS-Fixer 使用 Windwalker Core 的 `.php-cs-fixer.rules.php` 共用規則，依序從 `../core/` 或 `vendor/windwalker/core/` 載入。
 
 在套件的 `composer.json` 加入以下 scripts：
 
@@ -36,18 +37,18 @@
 }
 ```
 
-使用 `composer cs-check` 檢查套件設定的檔案範圍，使用 `composer cs-fix` 修正程式碼。可將參數傳給 PHP-CS-Fixer，例如：
+使用 `composer cs-check` 檢查，或使用 `composer cs-fix` 修正程式碼。可傳入 PHP-CS-Fixer 參數，例如：
 
 ```shell
 composer cs-check -- --path-mode=intersection src/SomeClass.php
 composer cs-fix -- --path-mode=intersection src/SomeClass.php
 ```
 
-`bin/autoload.app.php` 是供套件開發指令與測試使用的內部 helper，不是正式環境的應用程式啟動檔。它依序載入套件自己的 `vendor/autoload.php`，或假設套件位於主應用程式 `vendor/{vendor}/{package}` 下時，載入主應用程式的 Composer autoloader。正式應用程式應直接載入自己的 Composer autoloader。
+- `bin/autoload.app.php` 供套件開發指令與測試載入 Composer autoloader；正式應用程式請載入自己的 `vendor/autoload.php`。
+- `bin/cs-fixer.php` 會載入 autoloader 並執行 PHP-CS-Fixer。請保留此檔的可執行權限。
+- `.githooks/pre-commit` 處理已暫存的新增、複製、修改或重新命名 PHP 檔案；若有未暫存變更，不會重新暫存。Hook 或 PHP-CS-Fixer 執行失敗時，提交會失敗。
 
-`bin/cs-fixer.php` 會使用上述 helper 尋找 autoloader、切換至套件根目錄，並將命令列參數交給 PHP-CS-Fixer。請保留此檔的可執行權限。`.githooks/pre-commit` 只處理已暫存的新增、複製、修改或重新命名 PHP 檔案；若檔案同時有未暫存變更，hook 會修正工作目錄中的檔案但不會重新暫存，以免覆蓋部分暫存的狀態。Hook 或 PHP-CS-Fixer 執行失敗時，提交也會失敗。
-
-Hook 為手動啟用：在套件根目錄執行 `composer prepare-hooks` 設定該 repository 的 `core.hooksPath`，並可用 `composer remove-hooks` 取消。除非另有需求，請勿將 hook 啟用加入 Composer 的 `post-install-cmd` 或 `post-update-cmd`；在主應用程式根目錄執行 Composer 也不會執行依賴套件中宣告的 scripts。
+完成後提醒使用者自行在套件根目錄執行 `composer prepare-hooks` 啟用 hook。
 
 ## 自動更新版本號
 

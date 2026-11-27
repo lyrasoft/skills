@@ -1,5 +1,5 @@
 ---
-agent: ''
+agent: 'master-writer'
 ---
 
 將指定的頁面重寫。
