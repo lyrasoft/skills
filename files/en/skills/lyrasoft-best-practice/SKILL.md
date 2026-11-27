@@ -27,6 +27,8 @@ Provide shared development best practices for LYRASOFT projects so developers ca
   - PHP linting and `php-cs-fixer` usage: `references/cs/php-lint.md`
 - Package development (`references/packages/`):
   - LYRASOFT Package development guide: `references/packages/lyrasoft-package-develoment.md`
+  - Package README writing guide (agent directive syntax and section selection): `references/packages/lyrasoft-package-readme.md`
+  - Package README template: `assets/packages/README.md`
 - Structure and naming (`references/organizing/`):
   - CSS / SCSS structure and organization: `references/organizing/css-scss-organizing.md`
   - PHP / Windwalker Service organization: `references/organizing/php-service-organizing.md`

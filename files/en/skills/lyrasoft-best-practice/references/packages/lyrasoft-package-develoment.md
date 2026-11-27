@@ -2,14 +2,14 @@
 
 For general package development guidance, see `../../../windwalker/references/development-core/package-development.md`.
 
-This document covers additional procedures for LYRASOFT packages. Follow the standard workflow above first, then apply the LYRASOFT-specific development setup described here.
+This document supplements the LYRASOFT package development workflow. First complete the work according to the standard workflow above, then use this document to add the LYRASOFT-specific development environment.
 
 ## Development files in the package root
 
-- `.gitignore`: Use this shared version as a reference: <https://raw.githubusercontent.com/lyrasoft/luna/refs/heads/master/.gitignore>, and adjust as needed.
-- `.gitattributes`: Use the template at `../../assets/.gitattributes` and adjust it as needed.
-- `README.md`: You can start with the package title.
+- `.gitignore`: Use this shared version as a reference: <https://raw.githubusercontent.com/lyrasoft/luna/refs/heads/master/.gitignore>, and adjust it as needed.
+- `.gitattributes`: Use the template at `../../assets/.gitattributes` and adjust it as needed for the package.
 - `VERSION`: Start with `0.1.0`.
+- `README.md`: Add the package title only.
 
 ## PHP-CS-Fixer and Git Hook
 
@@ -91,3 +91,21 @@ php bin/release.php minor    # Bump the minor version
 php bin/release.php major    # Bump the major version
 php bin/release.php x.x.x    # Set a specific version
 ```
+
+## Testing setup
+
+Refer to the test examples under `vendor/windwalker/core/tests/` in the host app, and create:
+
+- `tests/bootstrap.app.php` - Loads the package autoloader and test environment. See the template at `../../assets/packages/bootstrap.app.php`.
+- `phpunit.dist.xml` - PHPUnit configuration file. See the template at `../../assets/packages/phpunit.dist.xml`.
+- `phpunit.app.dist.xml` - PHPUnit configuration file that uses the host app environment. Use the same configuration as above, but set `WINDWALKER_TEST_APP_ROOT=../../..`.
+- `.github/workflows/ci.yml` - GitHub Actions CI configuration file. Write it as needed and use the latest Actions modules.
+
+Other considerations:
+
+- Use SQLite for database tests by default.
+- If database tests are needed, preferably generate a different Database / Schema using a different hash each time a test starts, to prevent interference when multiple processes run tests simultaneously.
+
+## Complete README
+
+Only refer to this when the user explicitly asks for a README: copy the template `../../assets/packages/README.md` to the package root, fill it in by following the [package README writing guide](lyrasoft-package-readme.md), and remove all `agent` comments. Usually handle this after the feature is complete.

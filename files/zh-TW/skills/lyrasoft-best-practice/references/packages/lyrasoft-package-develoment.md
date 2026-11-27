@@ -8,8 +8,8 @@
 
 - `.gitignore`：可參考這份共用版本：<https://raw.githubusercontent.com/lyrasoft/luna/refs/heads/master/.gitignore> 並依需求調整
 - `.gitattributes`： 範本 `../../assets/.gitattributes`，可依套件需求調整。
-- `README.md`：可先放上套件標題。
 - `VERSION`：從 `0.1.0` 開始。
+- `README.md`：放上套件標題即可。
 
 ## PHP-CS-Fixer 與 Git Hook
 
@@ -91,3 +91,21 @@ php bin/release.php minor    # 更新 minor 版本
 php bin/release.php major    # 更新 major 版本
 php bin/release.php x.x.x    # 指定版本號
 ```
+
+## 測試機制
+
+參考 Host app 內的 `vendor/windwalker/core/tests/` 內的測試範例，建立：
+
+- `tests/bootstrap.app.php` - 載入套件的 autoloader 與測試環境，範本見: `../../assets/packages/bootstrap.app.php`
+- `phpunit.dist.xml` - PHPUnit 設定檔，範本見: `../../assets/packages/phpunit.dist.xml`
+- `phpunit.app.dist.xml` - PHPUnit 設定檔，使用 Host App 環境，同上但 `WINDWALKER_TEST_APP_ROOT=../../..`
+- `.github/workflows/ci.yml` - GitHub Actions CI 設定檔，依照需求撰寫，使用最新的 actions modules
+
+其他注意事項
+
+- DB 原則上先使用 SQLite 測試
+- 若需要 DB 測試，盡量設計成每一次測試啟動時都用不同的 hash 產生不同的 Database/Schema，避免多個 process 同時測試時互相干擾
+
+## 完整 README
+
+僅在使用者明確要求撰寫 README 時才參考：複製範本 `../../assets/packages/README.md` 到套件根目錄，依 [套件 README 撰寫指引](lyrasoft-package-readme.md) 填寫，完成後移除所有 `agent` 註解。通常於功能完成後處理。

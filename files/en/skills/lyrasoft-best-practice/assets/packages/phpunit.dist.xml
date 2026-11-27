@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    bootstrap="tests/bootstrap.app.php"
+    colors="false"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.2/phpunit.xsd"
+    cacheDirectory=".phpunit.cache"
+>
+	<php>
+		<ini name="error_reporting" value="-1" />
+
+        <!--
+            Host app mode: run from vendor/lyrasoft/luna using the host's vendor/ and
+            Runtime. Copy to phpunit.xml, then run `vendor/bin/phpunit -c phpunit.xml`
+            from this directory (use the host's vendor/bin/phpunit).
+        -->
+        <env name="WINDWALKER_TEST_APP_ROOT" value="" />
+
+        <!-- Database Test Connection, use hash on db name to prevent conflicts -->
+        <env name="WINDWALKER_TEST_DB_DSN" value="pdo_sqlite:dbname=tmp/test/{package}_test_{hash}.db;" />
+
+        <!-- Any other env...-->
+	</php>
+
+	<testsuites>
+		<testsuite name="Unit">
+			<directory>tests</directory>
+		</testsuite>
+	</testsuites>
+
+    <!-- Code Coverage -->
+    <source ignoreIndirectDeprecations="true">
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+    </source>
+</phpunit>

@@ -27,6 +27,8 @@ description: LYRASOFT 專案開發最佳實踐，涵蓋 Windwalker ORM、程式�
   - PHP Lint 與 `php-cs-fixer` 使用方式：`references/cs/php-lint.md`
 - 套件開發（`references/packages/`）：
   - LYRASOFT Package 開發指引：`references/packages/lyrasoft-package-develoment.md`
+  - 套件 README 撰寫指引（含 `<!-- agent: -->` 指示語法與章節取捨）：`references/packages/lyrasoft-package-readme.md`
+  - 套件 README 範本：`assets/packages/README.md`
 - 結構與命名（`references/organizing/`）：
   - CSS / SCSS 結構與組織方式：`references/organizing/css-scss-organizing.md`
   - PHP / Windwalker Service 組織方式：`references/organizing/php-service-organizing.md`
