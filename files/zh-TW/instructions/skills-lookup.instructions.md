@@ -61,6 +61,10 @@ Windwalker 內進行前端 js 開發或者 HTML / Blade / CSS / SCSS / Vue 套�
 - `./architecture.instructions.md` 整體專案架構指引。
 - `../skills/lyrasoft-best-practice/references/packages/lyrasoft-package-develoment.md` LYRASOFT 套件開發指引。
 
+## 使用 git worktree 執行任務時
+
+- `./worktree.instructions.md` Worktree 模式指引（命名、每次變更提交、squash 合併、vendor 連結）。
+
 ## 建立或編輯 instructions / skills / docs 時
 
 - `./instruction.instructions.md` instructions / skills / docs 編寫指引。

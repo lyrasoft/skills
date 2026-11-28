@@ -6,15 +6,24 @@
 
 需要登入的 Windwalker 流程（認證檔案、session cookie、session 橋接等）請見 `e2e-windwalker-auth.md`。
 
+## 選擇工具
+
+- **預設：單次 smoke test 或一次性驗證**，先使用 Chrome DevTools MCP 直接操控瀏覽器；找不到可用的 Chrome DevTools MCP 時，再改用 Playwright 直接操控。不需要寫腳本檔。
+- **只有在以下情況才寫 script 並使用 Playwright**：
+  - 使用者明確要求保留長期重複測試指令
+  - 使用者要求在整個對話期間持續重複執行同一行為（例如長時間工作階段中會不斷下新指令）
+
 ## 前置條件
 
-- 使用 `playwright-core` 直行測試。它不會下載瀏覽器；請以 `channel: 'chrome'` 啟動已安裝的 Chrome（Edge 則使用 `channel: 'msedge'`）。若缺少套件，請提示使用者。
-- 腳本與日誌放在 `tmp/e2e/`（已被 git 忽略）。請在 repo 根目錄執行：`node tmp/e2e/<script>.mjs`。
+- 使用 Playwright 時，以 `playwright-core` 直行測試。它不會下載瀏覽器；請以 `channel: 'chrome'` 啟動已安裝的 Chrome（Edge 則使用 `channel: 'msedge'`）。若缺少套件，請提示使用者。
+- 使用 Playwright script 時，腳本與日誌放在 `tmp/e2e/`（已被 git 忽略）。請在 repo 根目錄執行：`node tmp/e2e/<script>.mjs`。
 - 如果在開始測試前，需要啟動 PHP dev server or JS dev server，或者需要 build js (`yarn build`)，請搜尋 instructions 尋找專案內的執行方式。
 
 ## 工作流程
 
-- **以明確的連接埠啟動 PHP 伺服器**，並記錄其 PID：
+- **直接操控（預設）**：使用 Chrome DevTools MCP 開啟頁面、操作元素並檢查結果；不需要建立 `tmp/e2e/` 檔案。
+- **Playwright script（僅限長期重複測試）**：
+  - **以明確的連接埠啟動 PHP 伺服器**，並記錄其 PID：
 
    ```bash
    php windwalker server:start php:main --host localhost --port 8089 \
@@ -28,6 +37,6 @@
 - **複製並調整腳本**：將 `../assets` 複製到 `tmp/e2e/`，依專案與測試情境調整後執行。
 - **清理**：刪除 `.mjs` 腳本與日誌，並只停止你自己啟動的伺服器。保留 `.env.agent.local`。
 
-## 範例腳本
+## 範例腳本（僅 Playwright script 路徑）
 
 `../assets` 會登入（使用 `.env.agent.local` 中的 Session ID 或憑證）、開啟後台列表頁、在未勾選任何項目時點擊刪除工具列按鈕，並輸出原生對話框內容。**這只是範例：請依專案與測試情境調整網址、選擇器與斷言。**

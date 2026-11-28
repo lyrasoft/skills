@@ -39,6 +39,9 @@ Available commands:
   db:drop-all         Drop all database
   db:export           Export database to file.
   db:ping             Ping the database to check it is live.
+ dump
+  dump:config         Print compiled config for debugging.
+  dump:routes         Print compiled routes for debugging.
  generate
   generate:make       [g] Generate files.
   generate:revise     Revise file to template.

@@ -61,6 +61,10 @@ For modifying Windwalker Components / Core / Unicorn / Luna packages, or develop
 - `./architecture.instructions.md` Overall project architecture guidance.
 - `../skills/lyrasoft-best-practice/references/packages/lyrasoft-package-develoment.md` LYRASOFT package development guidance.
 
+## Working in a git worktree
+
+- `./worktree.instructions.md` Worktree mode guidance (naming, committing every change, squash merge, vendor link).
+
 ## Creating or editing instructions / skills / docs
 
 - `./instruction.instructions.md` Guidance for writing instructions / skills / docs.
